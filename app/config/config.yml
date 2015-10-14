@@ -20,7 +20,7 @@ framework:
     trusted_proxies: ~
 #    session:         ~
     session:
-        save_path: /var/lib/php5/
+        save_path: %kernel.root_dir%/var/sessions
     fragments:       ~
 
 # Twig Configuration
