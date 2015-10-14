@@ -1,0 +1,1 @@
+nbrErreurs=3&reponse1=[E]D[OX]EN [TH]I BOLHI&reponse2=KAI DH[LI]OISIN AR-&reponse3=ISTOF[ILW]I KAI TO-&reponse4=IS ADEL[FE]OIS ATE-&comment4=N'oubliez%20pas%20le%20tiret%20!&reponse5=LEIHN [EN]AI KAI EK-&reponse6=GONOI[S T]O[I]S TOUT-&comment6=Attention%20au%20tiret%20!&reponse7=WN KAI [OIKE]THISI&eof=true

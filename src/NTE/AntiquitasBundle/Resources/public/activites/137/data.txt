@@ -1,0 +1,1 @@
+coinName=CARTE D'INVENTAIRE&coinWeight=14.144g&glossUrl=../gloss/MdB-610.swf&glossXMLUrl=../gloss/glossary.xml&glossImageUrl=../gloss/images/&EOF=true&

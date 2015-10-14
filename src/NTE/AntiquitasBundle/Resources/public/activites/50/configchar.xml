@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<root>
+  <instructions><b>Consigne :</b><br/><br/>Lisez attentivement l'inscription présente dans la figure ci-contre, puis introduisez dans chaque champ chaque mot séparément en majuscules, tel que vous le voyez, sans chercher à résoudre les abréviations (ne pas indiquer les signes de séparation). Vous disposez de 3 essais.</instructions>
+  <comment_start></comment_start>
+  <comment_word_tiret></comment_word_tiret>
+  <comment_default_true>Votre réponse est correcte</comment_default_true>
+  <comment_default_false>Votre réponse n'est pas correcte. Vous pouvez obtenir la solution en cliquant sur l'image</comment_default_false>
+  <record>
+    <answer>M</answer>
+  </record>
+  <record>
+    <answer>FL</answer>
+  </record>
+  <record>
+    <answer>MARCIANUS</answer>
+<comment>Attention: quand cette mosaïque a été restaurée en 1906, l'inscription lacunaire a été complétée de manière erronée en MARCUNUS ; or, ce <i>cognomen</i> est très inhabituel et doit être abandonné au profit d'un surnom plus courant, <i>Marcianus</i>. Remplacez maintenant Marcunus par MARCIANUS.</comment>
+  </record>
+  <record>
+    <answer>MEDIAM</answer>
+<comment>autres mots restaurés (les parties modernes sont indiquées entre crochets) <i>media[m aream]</i> et <i>exed[ram]</i></comment>
+  </record>
+  <record>
+    <answer>ARE</answer>
+  </record>
+  <record>
+    <answer>ET</answer>
+  </record>
+  <record>
+    <answer>EXEDRAM</answer>
+<comment>autres mots restaurés (les parties modernes sont indiquées entre crochets) <i>media[m aream]</i> et <i>exed[ram]</i></comment>
+  </record>
+  <record>
+    <answer>TESSELLA</answer>
+  </record>
+  <record>
+    <answer>STRAV</answer>
+  </record>
+  <record>
+    <answer>D</answer>
+  </record>
+  <record>
+    <answer>S</answer>
+  </record>
+  <record>
+    <answer>[.]</answer>
+<comment>un fragment de la mosaïque comprenant un P ou un P et un C a sans doute disparu. Indiquez la ou les lettres manquantes entre crochets.</comment>
+  </record>
+</root>

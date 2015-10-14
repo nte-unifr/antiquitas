@@ -1,0 +1,31 @@
+{% extends 'NTEAntiquitasBundle::layout.html.twig' %}
+
+{% block body -%}
+    <h1>AntiquitasFichesBibliographies list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Contenu</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('fichesbibliographies_show', { 'id': entity.id }) }}">{{ entity.contenu }}</a></td>
+                <td>{{ entity.id }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('fichesbibliographies_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    {% endblock %}

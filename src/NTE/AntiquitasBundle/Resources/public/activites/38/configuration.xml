@@ -1,0 +1,21 @@
+<antiquitas>
+  <toolMenu srcswf="../outil_MenuNav_M18_FR.swf"/>
+  <!-- Titre et fichier qui s'affiche SOUS toutes les étapes sauf la consigne -->
+  <activity srcswf="" x="" y="">Edition d'une inscription: Athènes, décret II</activity>
+  <!-- La consigne qui s'affiche à la première page  -->
+  <consigne srcswf="accueil.swf" x="" y=""><b>Consigne</b>
+
+Observez attentivement l'inscription et cherchez à en révéler le message en parcourant les différentes étapes de son déchiffrement.
+
+N'hésitez pas à vous servir des outils (lexique, vocabulaire, sigles, ...) mis à votre disposition pour vous aider à résoudre les principales difficultés.</consigne>
+  <folder label="Etablissement du lemme" srcswf="" x="" y="">
+    <pagefile x="" y="">q1_CR1.swf</pagefile>
+  </folder>
+  <folder label="Transcription et restitution" srcswf="" x="" y="">
+    <pagefile x="" y="">q2_CR2_long.swf</pagefile>
+    <pagefile x="" y="">q3_CR2_long.swf</pagefile>
+  </folder>
+  <folder label="Traduction" srcswf="" x="" y="">
+    <pagefile x="" y="">q4_CR1.swf</pagefile>
+  </folder>
+</antiquitas>

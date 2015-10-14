@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<root>
+  <instructions><b>Consigne :</b><br/><br/>Introduisez dans chaque champ chaque mot séparément en majuscules puis, en vous aidant des outils, développez les abréviations en minuscules.<br/>Pour les lettres qui ont disparu dans une lacune de la pierre, notez-les toujours entre [ ] en majuscules.<br/>Quand un mot commence à la fin d'une ligne et se poursuit à la ligne suivante, mentionnez que le mot est coupé en ajoutant un - après les premières lettres.  Vous disposez de 3 essais.</instructions>
+  <comment_start></comment_start>
+  <comment_word_tiret></comment_word_tiret>
+  <comment_default_true>Votre réponse est correcte.</comment_default_true>
+  <comment_default_false>Votre réponse n'est pas correcte. Vous pouvez obtenir la solution en cliquant sur l'image</comment_default_false>
+  <record>
+    <answer>Dis</answer>
+  </record>
+  <record>
+    <answer>Manibus</answer>
+  </record>
+  <record>
+    <answer>FLAVIAE</answer>
+  </record>
+  <record>
+    <answer>SEVE-</answer>
+<comment_false><b>Attention : </b>Notez par un - que ce mot s'étend jusqu'à la ligne suivante.</comment_false>
+  </record>
+  <record>
+    <answer>RILLE</answer>
+<comment><b>Notice :</b> Orthographe <i>e</i> pour <i>ae</i>, <i>coniuge</i> pour <i>coniugi</i>.</comment>
+  </record>
+  <record>
+    <answer>QVE</answer>
+<comment>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule. </comment>
+  </record>
+  <record>
+    <answer>V-</answer>
+<comment><b>Attention : </b>Cette lettre n'est que la première lettre du mot qui se poursuit à la ligne suivante. Notez donc le - .</comment>
+  </record>
+  <record>
+    <answer>IXIT</answer>
+  </record>
+  <record>
+    <answer>ANnis</answer>
+  </record>
+  <record>
+    <answer>XXXXVI</answer>
+<comment><b>Notice : </b>Le chiffre notifiant  l'âge de la défunte est endommagé. Flavia Severilla avait probablement entre 36 et 38 ans lors de son décès.</comment>
+  </record>
+  <record>
+    <answer>FLAVius</answer>
+  </record>
+  <record>
+    <answer>SEVERIN-</answer>
+<comment><b>Notice : </b>Les deux dernières lettres du mot se trouvent à la ligne suivante. N'oubliez pas le - !</comment>
+  </record>
+  <record>
+    <answer>US</answer>
+  </record>
+  <record>
+    <answer>CONIVX</answer>
+<comment>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule. </comment>
+  </record>
+  <record>
+    <answer>C-</answer>
+<comment><b>Notice : </b>Cette lettre est la première lettre du mot qui s'étend jusqu'à la ligne suivante. Un - est donc nécessaire.</comment>
+  </record>
+  <record>
+    <answer>ONIVGE</answer>
+<comment>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule.<br/><b>Notice : </b>Le découpage maladroit de plusieurs mots (<i>Severille, vixit, conjuge</i>), associé à la gravure négligée de la pierre et à certaines particularités d'orthographe (<i>e</i> pour <i>ae</i>, <i>coniuge</i> pour <i>coniugi</i>), parle en faveur d'une datation tardive de l'inscription, au IIIe siècle de notre ère probablement.</comment>
+  </record>
+  <record>
+    <answer>Faciendum</answer>
+  </record>
+  <record>
+    <answer>Curavit</answer>
+  </record>
+</root>

@@ -1,0 +1,133 @@
+services:
+
+    nte_antiquitas.admin.antiquitas_modules:
+        class: NTE\AntiquitasBundle\Admin\AntiquitasModulesAdmin
+        arguments: [~, NTE\AntiquitasBundle\Entity\AntiquitasModules, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Antiquitas, label: Modules}
+
+    nte_antiquitas.admin.antiquitas_modules_bibliographies:
+        class: NTE\AntiquitasBundle\Admin\AntiquitasModulesBibliographiesAdmin
+        arguments: [~, NTE\AntiquitasBundle\Entity\AntiquitasModulesBibliographies, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Antiquitas, label: Modules Bibliographies}
+
+    nte_antiquitas.admin.antiquitas_modules_outils:
+        class: NTE\AntiquitasBundle\Admin\AntiquitasModulesOutilsAdmin
+        arguments: [~, NTE\AntiquitasBundle\Entity\AntiquitasModulesOutils, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Antiquitas, label: Modules Outils}
+
+    nte_antiquitas.admin.antiquitas_notices_activites:
+        class: NTE\AntiquitasBundle\Admin\AntiquitasNoticesActivitesAdmin
+        arguments: [~, NTE\AntiquitasBundle\Entity\AntiquitasNoticesActivites, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Antiquitas, label: Notices Activites}
+
+    nte_antiquitas.admin.antiquitas_notices_images:
+        class: NTE\AntiquitasBundle\Admin\AntiquitasNoticesImagesAdmin
+        arguments: [~, NTE\AntiquitasBundle\Entity\AntiquitasNoticesImages, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Antiquitas, label: Notices Images}
+
+    nte_antiquitas.admin.antiquitas_notices_liens:
+        class: NTE\AntiquitasBundle\Admin\AntiquitasNoticesLiensAdmin
+        arguments: [~, NTE\AntiquitasBundle\Entity\AntiquitasNoticesLiens, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Antiquitas, label: Notices Liens}
+
+    nte_antiquitas.admin.antiquitas_notices_notes:
+        class: NTE\AntiquitasBundle\Admin\AntiquitasNoticesNotesAdmin
+        arguments: [~, NTE\AntiquitasBundle\Entity\AntiquitasNoticesNotes, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Antiquitas, label: Notices Notes}
+
+    nte_antiquitas.admin.antiquitas_notices_textes:
+        class: NTE\AntiquitasBundle\Admin\AntiquitasNoticesTextesAdmin
+        arguments: [~, NTE\AntiquitasBundle\Entity\AntiquitasNoticesTextes, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Antiquitas, label: Notices Textes}
+
+    nte_antiquitas.admin.antiquitas_chapitres:
+        class: NTE\AntiquitasBundle\Admin\AntiquitasChapitresAdmin
+        arguments: [~, NTE\AntiquitasBundle\Entity\AntiquitasChapitres, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Antiquitas, label: Chapitres}
+
+    nte_antiquitas.admin.antiquitas_fiches:
+        class: NTE\AntiquitasBundle\Admin\AntiquitasFichesAdmin
+        arguments: [~, NTE\AntiquitasBundle\Entity\AntiquitasFiches, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Antiquitas, label: Fiches}
+
+    nte_antiquitas.admin.antiquitas_themes:
+        class: NTE\AntiquitasBundle\Admin\AntiquitasThemesAdmin
+        arguments: [~, NTE\AntiquitasBundle\Entity\AntiquitasThemes, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Antiquitas, label: Themes}
+
+    nte_antiquitas.admin.antiquitas_themes_modules:
+        class: NTE\AntiquitasBundle\Admin\AntiquitasThemesModulesAdmin
+        arguments: [~, NTE\AntiquitasBundle\Entity\AntiquitasThemesModules, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Antiquitas, label: Themes Modules}
+
+    nte_antiquitas.admin.antiquitas_categories:
+        class: NTE\AntiquitasBundle\Admin\AntiquitasCategoriesAdmin
+        arguments: [~, NTE\AntiquitasBundle\Entity\AntiquitasCategories, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Antiquitas, label: Categories}
+
+    nte_antiquitas.admin.antiquitas_activites:
+        class: NTE\AntiquitasBundle\Admin\AntiquitasActivitesAdmin
+        arguments: [~, NTE\AntiquitasBundle\Entity\AntiquitasActivites, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Antiquitas, label: Activites}
+
+    nte_antiquitas.admin.antiquitas_admin:
+        class: NTE\AntiquitasBundle\Admin\AntiquitasAdminAdmin
+        arguments: [~, NTE\AntiquitasBundle\Entity\AntiquitasAdmin, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Antiquitas, label: Admin}
+
+    nte_antiquitas.admin.antiquitas_auteurs:
+        class: NTE\AntiquitasBundle\Admin\AntiquitasAuteursAdmin
+        arguments: [~, NTE\AntiquitasBundle\Entity\AntiquitasAuteurs, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Antiquitas, label: Auteurs}
+
+    nte_antiquitas.admin.antiquitas_fiches_bibliographies:
+        class: NTE\AntiquitasBundle\Admin\AntiquitasFichesBibliographiesAdmin
+        arguments: [~, NTE\AntiquitasBundle\Entity\AntiquitasFichesBibliographies, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Antiquitas, label: Fiches Bibliographies}
+
+    nte_antiquitas.admin.antiquitas_textes_site_global:
+        class: NTE\AntiquitasBundle\Admin\AntiquitasTextesSiteGlobalAdmin
+        arguments: [~, NTE\AntiquitasBundle\Entity\AntiquitasTextesSiteGlobal, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Antiquitas, label: Textes Site Global}
+
+    nte_antiquitas.admin.antiquitas_traducteurs:
+        class: NTE\AntiquitasBundle\Admin\AntiquitasTraducteursAdmin
+        arguments: [~, NTE\AntiquitasBundle\Entity\AntiquitasTraducteurs, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Antiquitas, label: Traducteurs}
+
+    nte_antiquitas.admin.antiquitas_types:
+        class: NTE\AntiquitasBundle\Admin\AntiquitasTypesAdmin
+        arguments: [~, NTE\AntiquitasBundle\Entity\AntiquitasTypes, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Antiquitas, label: Types}
+
+    nte_antiquitas.admin.antiquitas_utilisateurs:
+        class: NTE\AntiquitasBundle\Admin\AntiquitasUtilisateursAdmin
+        arguments: [~, NTE\AntiquitasBundle\Entity\AntiquitasUtilisateurs, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Antiquitas, label: Utilisateurs}
+
+    nte_antiquitas.admin.antiquitas_modules_outils_modules:
+        class: NTE\AntiquitasBundle\Admin\AntiquitasModulesOutilsModulesAdmin
+        arguments: [~, NTE\AntiquitasBundle\Entity\AntiquitasModulesOutilsModules, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Antiquitas, label: Modules Outils Modules}

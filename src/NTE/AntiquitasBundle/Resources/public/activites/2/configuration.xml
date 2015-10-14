@@ -1,0 +1,20 @@
+<antiquitas>
+  <toolMenu srcswf="../outil_MenuNav_M3_FR.swf"/>
+  <!-- Titre et fichier qui s'affiche SOUS toutes les étapes sauf la consigne -->
+  <activity srcswf="" x="" y="">Tribus attiques: forme et idéologie </activity>
+  <!-- La consigne qui s'affiche à la première page  -->
+  <consigne srcswf="../accueil_Dyn_ST_bgrBrown.swf" x="" y=""><b>Consigne</b><br/><br/>Outre les inscriptions, la <i>Constitution d'Athènes</i> d'Aristote livre de précieuses informations sur la configuration des tribus attiques. Dégagez, par l'observation, les conséquences de la réforme de Clisthène.</consigne>
+  <folder label="Etape 1" srcswf="folder1_aux.swf" x="" y="">
+    <pagefile x="10" y="72">q1a.swf</pagefile>
+    <pagefile x="10" y="72">q1b.swf</pagefile>
+  </folder>
+  <folder label="Etape 2">
+    <pagefile x="10" y="72">q2.swf</pagefile>
+    <pagefile x="10" y="72">q2b.swf</pagefile>
+    <pagefile x="10" y="72">q3.swf</pagefile>
+  </folder>
+  <folder label="Bilan">
+    <!-- Une page bilan peut être déclarée avec le MovieClip à imprimer dans le fichier bilan.swf-->
+    <pagefile typeBilan="true" typePrint="true" mcToPrint="printMe">bilan.swf</pagefile>
+  </folder>
+</antiquitas>

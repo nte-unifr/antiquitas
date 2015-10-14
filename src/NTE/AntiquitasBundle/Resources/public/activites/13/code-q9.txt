@@ -1,0 +1,71 @@
+// init
+g_targetDrops = 0;
+//superFeed.dt_feedback.align = "center";
+superFeed.dt_feedback.html = true;
+superFeed.dt_feedback.htmlText = "";
+// creer un tableau pour contenir les noms des instances des "drags"
+g_targets = 12;
+g_tabNoms = new Array(g_targets);
+// feedback scroller
+//superFeed.scrollerMC.setScroller();
+//
+// fonctions
+// 
+// évaluation des réponses
+function evalRep() {
+	// INTERFACE - PARENT
+	var regPath = _root.whereReg.getWhere("RegisterJLT", whereStart=this);
+	var path1 = eval(regPath.registerArr["InterfaceChild"]);
+	if (path1 == undefined) {
+		trace("IN CONTROL Interface-> can't find the interfaceChild object"+this.groupe);
+	} else {
+		path1.SpeTransFunc.runInterfaceChild(status1f=1, resultNo1=0, resultStr1, resultStr2, resultArr1="");
+	}
+	// END INTERFACE
+	for (i=0; i<g_tabNoms.length; i++) {
+		nomInstance = g_tabNoms[i];
+		reponse = (nomInstance.reponse);
+		//trace("evalrep reponse "+reponse);
+		if (nomInstance.onTarget == true) {
+			//reponse JUSTE
+			if (nomInstance.reponse == true) {
+				//	nomInstance.vue._alpha = 100;
+				//	nomInstance.croix._alpha = 0;
+				//rajouter le formatage html
+				superFeed.dt_feedback.htmlText = '<p align=\"center\">'+QDrag.fbJuste+'</p>';
+				superFeed.dt_feedback.textColor = 0x006633;
+				//superFeed.dt_feedback.align = "center";
+			} else {
+				//reponse FAUSSE
+				//	nomInstance.vue._alpha = 0;
+				//	nomInstance.croix._alpha = 100;
+				superFeed.dt_feedback.htmlText = '<p align=\"center\">'+QDrag.fbFaux+'</p>';
+				superFeed.dt_feedback.textColor = 0xcc0000;
+				//trace("superFeed.dt_feedback.htmlText  "+superFeed.dt_feedback.htmlText);
+				//superFeed.dt_feedback.align = true;
+			}
+		}
+	}
+	// feedback scroller
+	superFeed.scrollerMC.setScroller();
+}
+// reinitialisation (retour au début)
+function reinit() {
+	// feedback scroller
+	//superFeed.scrollerMC.setScroller();
+	//
+	feedBack.dt_lib.text = feedBack.lib1;
+	feedBack.dt_text.text = feedBack.text1;
+	for (i=0; i<g_tabNoms.length; i++) {
+		trace("nomInstance "+nomInstance);
+		nomInstance = g_tabNoms[i];
+		nomInstance._x = (nomInstance.posX);
+		nomInstance._y = (nomInstance.posY);
+		nomInstance.croix._alpha = 0;
+		nomInstance.vue._alpha = 0;
+		nomInstance.dragable = true;
+		nomInstance.reponse = false;
+		nomInstance.onTarget = false;
+		dt_feedback.htmlText = "";
+	}
+}

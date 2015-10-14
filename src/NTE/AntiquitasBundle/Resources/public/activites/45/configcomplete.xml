@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<root>
+  <instructions><b>Consigne :</b><br/><br/>Introduisez dans chaque champ chaque mot séparément en majuscules puis, en vous aidant des outils, développez les abréviations en minuscules.<br/>Pour les lettres qui ont disparu dans une lacune de la pierre, notez-les toujours entre [ ] en majuscules.<br/>Quand un mot commence à la fin d'une ligne et se poursuit à la ligne suivante, mentionnez que le mot est coupé en ajoutant un - après les premières lettres.  Vous disposez de 3 essais.</instructions>
+  <comment_start/>
+  <comment_word_tiret/>
+  <comment_default_true>Votre réponse est correcte.</comment_default_true>
+  <comment_default_false>Votre réponse n'est pas correcte. Vous pouvez obtenir la solution en cliquant sur l'image</comment_default_false>
+  <record>
+    <answer>[Dis]</answer>
+    <comment_false>N'oubliez pas de placer entre [ ] les lettres qui ne figurent plus sur la pierre.</comment_false>
+  </record>
+  <record>
+    <answer>Manibus</answer>
+  </record>
+  <record>
+    <answer>POMPeiae</answer>
+  </record>
+  <record>
+    <answer>GE[M]ELLae</answer>
+  </record>
+  <record>
+    <answer>POMPeia</answer>
+  </record>
+  <record>
+    <answer>DI[CA]EA</answer>
+  </record>
+  <record>
+    <answer>Liberta</answer>
+  </record>
+  <record>
+    <answer>ET</answer>
+  </record>
+  <record>
+    <answer>PRIMV[L]IA</answer>
+<comment>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule. </comment>
+  </record>
+  <record>
+    <answer>Serva</answer>
+  </record>
+  <record>
+    <answer>EDVCATricis</answer>
+    <comment>Les anciennes restitutions proposaient educat(rices) Aug(usti) n(ostri). Le premier éditeur de l'inscription, Th. Mommsen, avait en effet compris que les trois femmes mentionnées sur la pierre avaient été nourrices de l'empereur. Cette interprétation est totalement rejetée aujourd'hui.<br/>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule. </comment>
+  </record>
+  <record>
+    <answer>[A]VGusti</answer>
+<comment>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule. </comment>
+  </record>
+  <record>
+    <answer>Nostri</answer>
+  </record>
+</root>

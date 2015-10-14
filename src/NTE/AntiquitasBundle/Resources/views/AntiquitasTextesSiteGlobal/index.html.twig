@@ -1,0 +1,37 @@
+{% extends 'NTEAntiquitasBundle::layout.html.twig' %}
+
+{% block body -%}
+    <h1>AntiquitasTextesSiteGlobal list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Variable</th>
+                <th>Fr</th>
+                <th>De</th>
+                <th>En</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('textes_show', { 'id': entity.id }) }}">{{ entity.variable }}</a></td>
+                <td>{{ entity.fr }}</td>
+                <td>{{ entity.de }}</td>
+                <td>{{ entity.en }}</td>
+                <td>{{ entity.id }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('textes_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    {% endblock %}

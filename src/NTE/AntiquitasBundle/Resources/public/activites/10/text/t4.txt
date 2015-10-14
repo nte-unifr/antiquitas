@@ -1,0 +1,2 @@
+textVar=Sans avoir été ni préteur ni consul, on m'octroie l'imperium de proconsul à 25 ans. Je triomphe en Espagne. Consul en 205, puis proconsul de Sicile, je suis décidé à porter la guerre en Afrique. Je défais les troupes d'Hannibal à Zama en 202. Ma victoire sur Carthage me confère le surnom d'Africanus.
+&EOF=end&

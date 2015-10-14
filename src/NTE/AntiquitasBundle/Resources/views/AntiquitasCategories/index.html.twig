@@ -1,0 +1,45 @@
+{% extends 'NTEAntiquitasBundle::layout.html.twig' %}
+
+{% block body -%}
+    <h1>{{ 'Liste des modules' | trans }}</h1>
+
+    <div class="row-fluid">
+        {% set locale = app.request.get('_locale') %}
+        {{ attribute(intro, locale)|raw }}
+    </div>
+
+    {% for entity in entities %}
+        <div class="row-fluid">
+            <h2>{{ entity.nom }}</h2>
+            <ul>
+            {% for theme in entity.themes %}
+                <h3>{{ theme }}</h3>
+                <ul>
+                {% for module in theme.modules %}
+                    {% if module.id == 20 %}
+                        <li><a href="javascript:OpenToolsWindow('{{ asset('bundles/nteantiquitas/outils') }}/12/index.html');">{{ module|raw }}</a> 
+                        {% if module.langage != '' %}
+                            <img src="{{ asset('bundles/nteantiquitas/img/' ~ module.langage) }}.jpg" alt="{{ module.langage }}" /> &nbsp; 
+                        {% endif %}
+                        {% for auteur in module.auteurs %}
+                            {{ auteur }}{% if loop.index == module.auteurs|length - 1 %} {{ 'et' | trans }} {%- elseif loop.index < module.auteurs|length -%},{%- endif -%}
+                        {% endfor %}
+                        </li>
+                    {% else %}
+                        <li><a href="{{ path('modules_show', { 'id': module.id }) }}">{{ module|raw }}</a> 
+                        {% if module.langage != '' %}
+                            <img src="{{ asset('bundles/nteantiquitas/img/' ~ module.langage) }}.jpg" alt="{{ module.langage }}" /> &nbsp; 
+                        {% endif %}
+                        {% for auteur in module.auteurs %}
+                            {{ auteur }}{% if loop.index == module.auteurs|length - 1 %} {{ 'et' | trans }} {%- elseif loop.index < module.auteurs|length -%},{%- endif -%}
+                        {% endfor %}
+                        </li>
+                    {% endif %}
+                {% endfor %}
+                </ul>
+            {% endfor %}
+            </ul>
+        </div>
+    {% endfor %}
+
+{% endblock %}

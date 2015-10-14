@@ -1,0 +1,1 @@
+coinName=CARTE D'INVENTAIRE&coinWeight=3,878g&EOF=true&

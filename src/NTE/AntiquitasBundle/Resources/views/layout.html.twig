@@ -1,0 +1,247 @@
+{# src/NTE/AntiquitasBundle/Resources/views/layout.html.twig #}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ titre|striptags|raw }} - Antiquitas - Université de Fribourg</title>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <meta name="keywords" lang="fr" content="université, formation, suisse, fribourg, recherche, études" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block stylesheets %}
+  <link rel="stylesheet" href="{{ asset('bundles/nteantiquitas/css/bootstrap.min.css') }}" type="text/css" media="screen" />
+
+  <link href="{{ asset('bundles/nteantiquitas/css/unifr.101.css') }}" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="{{ asset('bundles/nteantiquitas/css/jquery-ui-1.7.1.custom.css') }}" type="text/css" />
+  <!-- Add fancyBox -->
+  <link rel="stylesheet" href="{{ asset('bundles/nteantiquitas/js/fancybox/jquery.fancybox.css') }}" type="text/css" media="screen" />
+  <link rel="stylesheet" href="{{ asset('bundles/nteantiquitas/js/fancybox/helpers/jquery.fancybox-buttons.css') }}" type="text/css" media="screen" />
+  <!-- Add jcarousel -->
+  <link rel="stylesheet" href="{{ asset('bundles/nteantiquitas/css/skin.css') }}" type="text/css" media="screen" />
+  <link rel="stylesheet" href="{{ asset('bundles/nteantiquitas/css/style.css') }}" type="text/css" media="screen" />
+{% endblock %}
+
+  <style>
+  .main {background-image: url("http://unifr.ch/images/background_main.gif"); background-repeat: repeat-y;}
+  .navbar-inner {
+    background-color: #006699;
+    background-image: none;
+    background-repeat: repeat-x;
+    border: 0px solid #D4D4D4;
+    border-radius: 0;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+    min-height: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #FFFFFF;
+    filter: none;
+  }
+  .navbar a {
+    color: #FFFFFF;
+  }
+  .navbar .nav > li > a, .navbar .nav > li > a:hover {
+    color: #FFFFFF;
+    text-shadow: 0 0px 0 #FFFFFF;
+    border: 0 1px 0 1px solid #FFFFFF;
+    padding: 5px;
+    text-transform: uppercase;
+  }
+  .navbar .brand {
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    font-size: 20px;
+    font-weight: 200;
+    margin-left: -10px;
+    padding: 5px 10px;
+    text-shadow: 0 0px 0 #FFFFFF;
+    text-decoration: none;
+    width: 170px;
+  }
+  body > .container {
+    border-color: #FFFFFF #CCCCCC #CCCCCC;
+    border-style: solid;
+    border-width: 1px;
+  }
+  .box001 {
+    margin-left: -10px;
+  }
+  .annexes {
+    float: left;
+    width: 30%;
+  }
+  .clear {
+    clear: both;
+  }
+  .option_upper {
+     text-transform:uppercase;
+  }
+  nav a, nav span { margin: 5px;}
+  a.btn {
+    text-decoration: none;
+  }
+  @media (max-width: 767px) {
+    .nav-collapse .nav > li > a:hover {color: #000000;}
+    .main {background-image: none;}
+  }
+  </style>
+
+  {% block javascripts %}
+  <script type="text/javascript" src="{{ asset('bundles/nteantiquitas/js/jquery-1.8.3.min.js') }}">
+  </script>
+
+  <script type="text/javascript" src="{{ asset('bundles/nteantiquitas/js/jquery-ui-1.7.1.custom.min.js') }}">
+  </script>
+  <!-- Add fancyBox -->
+  <script type="text/javascript" src="{{ asset('bundles/nteantiquitas/js/fancybox/jquery.fancybox.pack.js') }}">
+  </script>
+  <script type="text/javascript" src="{{ asset('bundles/nteantiquitas/js/fancybox/helpers/jquery.fancybox-buttons.js') }}">
+  </script>
+  <script type="text/javascript" src="{{ asset('bundles/nteantiquitas/js/fancybox/helpers/jquery.fancybox-media.js') }}">
+  </script>
+  <script src="{{ asset('bundles/nteantiquitas/js/bootstrap.min.js') }}" type="text/javascript">
+  </script>
+
+    <script type="text/javascript">
+        var toolsWindowOptions = 
+            "toolbar=yes"
+            +",location=yes"
+            +",directories=no"
+            +",status=yes" 
+            +",menubar=no"
+            +",scrollbars=yes"
+            +",resizable=yes" 
+            +",width=800"
+            +",height=593";
+
+        var toolsWindow;
+
+        function OpenToolsWindow(theFile) {
+            if ((toolsWindow == null) || (toolsWindow.closed)){
+                toolsWindow = this.open(theFile, "toolsWindow", toolsWindowOptions);
+            } 
+            else {
+                toolsWindow.location.replace(theFile);
+            }
+            if (window.focus)
+                toolsWindow.focus(); 
+
+        }
+    </script>
+  {% endblock %}
+</head>
+
+<body>
+
+  <div class="container main">
+    <div id="webpage2">
+      <!-- start:identite -->
+        <div id="identity" class="visible-desktop">
+            <div class="bandeau">
+                <a href="http://www.unifr.ch"><img class="bandeau-faculty" border="0" src="{{ asset('bundles/nteantiquitas/img/bandeau_unifr_universite.jpg') }}" alt="Université de Fribourg | Universität Freiburg"></a>
+                <div id="address2">
+                    <div class="txt">
+                        <a href="{{ path('modules') }}">ANTIQUITAS</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+      <div class="hidden-desktop">
+        <img src="{{ asset('bundles/nteantiquitas/img/bandeau_unifr_universite.jpg') }}" alt="UniFR Logo" />
+      </div>
+      <!-- end:identite -->
+
+      <!-- start:navig 2 -->
+      <div class="navbar">
+        <div class="navbar-inner">
+          <div class="container">
+
+            <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar">
+              </span>
+              <span class="icon-bar">
+              </span>
+              <span class="icon-bar">
+              </span>
+            </a>
+
+            <!-- Be sure to leave the brand out there if you want it shown -->
+            <a class="brand" href="{{ path('modules') }}">Antiquitas</a>
+
+            <!-- Everything you want hidden at 940px or less, place within here -->
+            <div class="nav-collapse collapse">
+              <!-- .nav, .navbar-search, .navbar-form, etc -->
+              <ul class="nav">
+                <li>
+                  <a href="{{ path('modules') }}" title="{{ 'Liste des modules' | trans }}">{{ 'Modules' | trans }}</a>
+                </li>
+                <li>
+                  <a href="{{ path('textes_show', {'id': 'cours'}) }}" title="{{ 'Antiquitas dans les Hautes écoles' | trans }}">{{ 'Hautes écoles' | trans }}</a>
+                </li>
+                <li>
+                  <a href="{{ path('textes_show', {'id': 'communication'}) }}">{{ 'Communications' | trans }}</a>
+                </li>
+                <li>
+                  <a href="{{ path('textes_show', {'id': 'equipe'}) }}">{{ 'Equipe' | trans }}</a>
+                </li>
+                <li>
+                  <a href="{{ path('textes_show', {'id': 'credit'}) }}">{{ 'Crédits' | trans }}</a>
+                </li>
+              </ul>
+              <ul class="nav pull-right">
+            {% for locale in ['fr', 'de'] %}
+                <li>
+                    <a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale' : locale})) }}">{{ locale }}</a>
+                </li>
+            {% endfor %}
+                <li>
+                    &nbsp;&nbsp;&nbsp;
+                </li>
+                <li>
+                  <a href="http://unifr.ch">Unifr</a>
+                </li>
+                <li>
+                  <a href="http://nte.unifr.ch">Centre NTE</a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- end:navig 2 -->
+
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <div class="span3 hidden-phone">
+            <!-- box menu2 -->
+            {% block sideblock %}
+            {% endblock %}
+          </div>
+
+          <!-- end:colonneLeft -->
+          <div class="span9">
+            <ul>
+              <!-- start:colonneRight -->
+              <div id="content2">
+                {% block body %}
+                {% endblock %}
+              </div>
+                <!-- end:colonneRight -->
+              </ul>
+            </div>
+        </div>
+      </div>
+        <!-- end:main -->
+
+        <!-- start:signature -->
+        <div id="signature">
+          {{ 'Antiquit@s est un projet du' | trans }} <a href="http://www.virtualcampus.ch/">{{ 'Campus Virtuel Suisse' | trans }}</a> - {{ 'Contact' | trans }} : sandrine.codourey(at)unifr.ch &amp; <a href="http://www.unifr.ch/nte/">Centre NTE</a> - Université de Fribourg - Suisse
+        </div>
+        <!-- end:signature -->
+
+      </div>
+    </div>
+  </body>
+  </html>

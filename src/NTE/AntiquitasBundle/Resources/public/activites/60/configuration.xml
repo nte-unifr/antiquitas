@@ -1,0 +1,20 @@
+<antiquitas>
+
+	<toolMenu srcswf="../outilGeneral_FR.swf"/>
+ <!-- Titre et fichier qui s'affiche SOUS toutes les étapes sauf la consigne -->
+  <activity srcswf="" x="" y="">Femmes et vie publique à l'époque hellénistique</activity>
+	  <!-- La consigne qui s'affiche à la première page  -->
+  <consigne srcswf="accueil.swf" x="" y=""/>
+  	
+  		<folder label="Fiche Mousa" srcswf="stele-mousa.swf" x="" y="">
+			<pagefile x="260" y="">1-1.swf</pagefile>
+			<pagefile x="260" y="">1-2.swf</pagefile>
+		</folder>
+ 
+  <folder label="Bilan">
+    <!-- Une page bilan peut être déclarée avec le MovieClip à imprimer dans le fichier bilan.swf-->
+    <pagefile typeBilan="true" typePrint="true" mcToPrint="printMe">bilan.swf</pagefile>
+  </folder>
+
+</antiquitas>
+

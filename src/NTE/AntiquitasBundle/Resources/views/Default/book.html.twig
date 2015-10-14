@@ -1,0 +1,290 @@
+<style>
+    hr { clear: both;}
+</style>
+
+
+    <h1>{{ 'Antiquitas' | trans }}</h1>
+
+    <div class="row-fluid">
+        {% set locale = app.request.get('_locale') %}
+        {{ attribute(intro, locale)|raw }}
+    </div>
+
+    <hr />
+
+    {% for entity in entities %}
+        <div class="row-fluid">
+            <h1>Categorie: {{ entity.nom }}</h1>
+            {% for theme in entity.themes %}
+                <h2>Thème: {{ theme }}</h2>
+                {% for module in theme.modules %}
+                    <hr />
+                    {% if module.id == 20 %}
+                        <h3>Module: {{ module|raw }}</h3>
+                        {% if module.langage != '' %}
+                            <img src="{{ asset('bundles/nteantiquitas/img/' ~ module.langage) }}.jpg" alt="{{ module.langage }}" /> &nbsp; 
+                        {% endif %}
+                        {% for auteur in module.auteurs %}
+                            {{ auteur }}{% if loop.index == module.auteurs|length - 1 %} {{ 'et' | trans }} {%- elseif loop.index < module.auteurs|length -%},{%- endif -%}
+                        {% endfor %}
+                        {#% include asset('bundles/nteantiquitas/outils') ~ '/12/index.html' %#}
+                    {% else %}
+
+                        <div class="module">
+                            
+                            <h3>{{ 'Module' | trans }} : {{ module.nom }}</h3>
+                            {% thumbnail module.media, 'reference' %}
+
+                            <div class="row-fluid">
+                                <br /><strong>
+                            {{ module.auteurs|length > 1 ? 'Auteurs'|trans : 'Auteur'|trans }}: 
+                            {% for auteur in module.auteurs %}
+                                {{ auteur }}{% if loop.index == module.auteurs|length - 1 %} et {%- elseif loop.index < module.auteurs|length -%},{%- endif -%}
+                            {% endfor %}
+                                </strong>
+                            </div>
+
+                            {% if module.introductionResume != '' or module.introduction != '' %}
+                            <div class="introduction">
+                                <h4>{{ 'Introduction' | trans }}</h4>
+                                {% if module.introduction != '' %}
+                                    {{ module.introduction|replace({'src="images/': 'src="' ~ asset('bundles/nteantiquitas/images/') })|raw }}
+                                {% else %}
+                                    {{ module.introductionResume|replace({'src="images/': 'src="' ~ asset('bundles/nteantiquitas/images/') })|replace({"OpenToolsWindow('activites/": "OpenToolsWindow('" ~ asset('bundles/nteantiquitas/activites/') })|raw }}
+                                {% endif %}
+                            </div>
+                            <hr />
+                            {% endif %}
+
+                            {% for chapitre in module.chapitres %}
+                                <h4>{{ 'Chapitre' | trans }} {{ chapitre.position }} : {{ chapitre|raw }}</h4>
+
+                                <div class="row-fluid">
+                                    <div class="span2">
+                                        <strong>{{ 'Thème' | trans }} :</strong>
+                                    </div>
+                                    <div class="span10">
+                                        {{ chapitre.theme|raw }}
+                                    </div>
+                                </div>
+                                <div class="row-fluid">
+                                    <div class="span2">
+                                        <strong>{{ 'Objectif' | trans }} :</strong>
+                                    </div>
+                                    <div class="span10">
+                                        {{ chapitre.objectif|raw }}
+                                    </div>
+                                </div>
+
+                                <div class="row-fluid">
+                                    <div class="span6">
+                                    {% for fiche in chapitre.fiches %}
+                                        <h5>{{ chapitre.position }}.{{ fiche.position }} {{ fiche|raw }}</h5>
+
+                                            <div class="row-fluid">
+                                                {{ fiche.contenu|replace({'src="images/': 'src="' ~ asset('bundles/nteantiquitas/images/') })|replace({'value="authorDev/': 'value="' ~ asset('bundles/nteantiquitas/authorDev/') })|replace({'src="authorDev/': 'src="' ~ asset('bundles/nteantiquitas/authorDev/') })|raw }}
+                                            </div>
+
+                                            {% if fiche.noticestextes|length > 0 %}
+                                            <div class="fiche-noticestextes">
+                                                <h6>{{ 'Textes' | trans }}</h6>
+                                                <ul>
+                                                    {% for notice in fiche.noticestextes %}
+                                                        <li><a name="bak-texte-{{ fiche.id }}-{{ notice.id }}"><a href="#texte-{{ fiche.id }}-{{ notice.id }}">{{ notice.nom|raw }}</a></li>
+                                                        {{ notice.description|raw }}
+                                                    {% endfor %}
+                                                </ul>
+                                            </div>
+                                            {% endif %}
+
+                                            {% if fiche.noticesimages|length > 0 %}
+                                            <div class="fiche-noticesimages">
+                                                <h6>{{ 'Images' | trans }}</h6>
+                                                <ul>
+                                                    {% for notice in fiche.noticesimages %}
+                                                        <div style="float: left; width: 30%;"><center><a name="bak-image-{{ fiche.id }}-{{ notice.id }}"><a href="#image-{{ fiche.id }}-{{ notice.id }}">{% thumbnail notice.media, 'thumb' with {'style' : 'height: 60px;'} %} <br />{{ notice.nom|raw }}</a><br />
+                                                        {{ notice.description|striptags|raw }}</center></div>
+                                                    {% endfor %}
+                                                    <div style="clear: both;"></div>
+                                                </lu>
+                                            </div>
+                                            {% endif %}
+
+                                            {% if fiche.noticesnotes|length > 0 %}
+                                            <div class="fiche-noticesnotes">
+                                                <h6>{{ 'Notes' | trans }}</h6>
+                                                <ul>
+                                                    {% for notice in fiche.noticesnotes %}
+                                                        <li><a name="bak-note-{{ fiche.id }}-{{ notice.id }}"><a href="#note-{{ fiche.id }}-{{ notice.id }}">{{ notice.nom|raw }}</a><br />
+                                                        {{ notice.description|raw }}</li>
+                                                    {% endfor %}
+                                                </ul>
+                                            </div>
+                                            {% endif %}
+
+                                            {% if fiche.noticesliens|length > 0 %}
+                                            <div class="row-fluid">
+                                                <h6>{{ 'Liens' | trans }}</h6>
+                                                <ul>
+                                                {% for notice in fiche.noticesliens %}
+                                                    <li><a href="{{ notice.url }}" target="_blank">{{ notice.nom|raw }}</a><br />
+                                                    {{ notice.description|raw }}</li>
+                                                {% endfor %}
+                                                </ul>
+                                            </div>
+                                            {% endif %}
+
+                                            {% if fiche.bibliographie != '' %}
+                                            <div class="fiche-bibliographie">
+                                                <h6>{{ 'Bibliographie pour la fiche' | trans }}</h6>
+                                                
+                                                {{ fiche.bibliographie|raw }}
+                                            </div>
+                                            {% endif %}
+
+                                    {% endfor %}
+                                    </div>
+                                </div>
+                            {% endfor %}
+
+                            {# **************************************************************************************************************
+                            <h4>{{ 'Ressources liées à ce module' | trans }}</h4>
+                            
+                                <div class="row-fluid">
+                                    <div class="span2">
+                                    </div>
+                                    <div class="span8">
+                                        {% if noticestextes_type4[module.id]|length + noticestextes_type5[module.id]|length > 0 %}
+                                            <h5>{{ 'Textes' | trans }}</h5>
+                                            <div class="noticestextes">
+                                                <h6>{{ 'Textes littéraires' | trans }}</h6>
+                                                {% for notice in noticestextes_type5[module.id] %}
+                                                    <a href="{{ path('noticestextes_show', {'id': notice.id}) }}">{{ notice.nom|raw }}</a> (type = {{ notice.idType.id }} {{ notice.idType }})<br />
+                                                {% endfor %}
+                                                <h6>{{ 'Inscriptions' | trans }}</h6>
+                                                {% for notice in noticestextes_type4[module.id] %}
+                                                    <a href="{{ path('noticestextes_show', {'id': notice.id}) }}">{{ notice.nom|raw }}</a> (type = {{ notice.idType.id }} {{ notice.idType }})<br />
+                                                {% endfor %}
+                                            </div>
+                                        {% endif %}
+                                        {% if noticesimages[module.id]|length > 0 %}
+                                            <h5>{{ 'Images' | trans }}</h5>
+                                            <div class="noticesimages">
+                                                {% for notice in noticesimages[module.id] %}
+                                                <div class="row-fluid">
+                                                    <div class="span1"></div><div class="span2">{% thumbnail notice.media, 'thumb' with {'style': 'height: 20px;'} %}</div>
+                                                    <div class="span9"><a href="{{ path('noticesimages_show', {'id': notice.id}) }}">{{ notice.nom|raw }}</a> ({{ 'Chapitre' | trans }} {{ notice.idFiche.idChapitre.position }})</div>
+                                                </div>
+                                                {% endfor %}
+                                            </div>
+                                        {% endif %}
+                                        {% if noticesnotes[module.id]|length > 0 %}
+                                            <h5>{{ 'Notes' | trans }}</h5>
+                                            <div class="noticesnotes">
+                                                {% for notice in noticesnotes[module.id]|sort %}
+                                                    <a href="{{ path('noticesnotes_show', {'id': notice.id}) }}">{{ notice.nom|raw }}</a><br />
+                                                {% endfor %}
+                                            </div>
+                                        {% endif %}
+                                        {% if noticesliens[module.id]|length > 0 %}
+                                            <h5>{{ 'Liens' | trans }}</h5>
+                                            <div class="noticesliens">
+                                                {% for notice in noticesliens[module.id]|sort %}
+                                                    <li><a href="{{ notice.url }}" target="_blank">{{ notice.nom|raw }}</a><br />
+                                                    {{ notice.description|raw }}</li>
+                                                {% endfor %}
+                                            </div>
+                                    {% endif %}
+                                    </div>
+                                </div> 
+                            ************************************************************************************************************** #}
+
+                            {% if module.bibliographie != '' %}
+                            <div class="bibliographie">
+                                <h4>{{ 'Bibliographie' | trans }}</h4>
+                                {{ module.bibliographie|raw }}
+                            </div>
+                            {% endif %}
+
+                            {% if module.conclusion != '' or module.conclusionResume != '' %}
+                            <div class="conclusion">
+                                <h4>{{ 'Conclusion' | trans }}</h4>
+                                    {% if module.conclusion != '' %}
+                                        {{ module.conclusion|replace({'src="images/': 'src="' ~ asset('bundles/nteantiquitas/images/') })|raw }}
+                                    {% else %}
+                                        {{ module.conclusionResume|replace({'src="images/': 'src="' ~ asset('bundles/nteantiquitas/images/') })|replace({"OpenToolsWindow('activites/": "OpenToolsWindow('" ~ asset('bundles/nteantiquitas/activites/') })|raw }}
+                                    {% endif %}
+                                </div>
+                            </div>
+                            {% endif %}
+                            <br />
+
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+        </div>
+    {% endfor %}
+
+    <hr /><a name="annexes" />
+    <h1>Annexes</h1>
+    <a name="annexes-nt" />
+    <h2>Notices Textes</h2>
+    {% for entity in entities %}
+        {% for theme in entity.themes %}
+            {% for module in theme.modules %}
+                {% for chapitre in module.chapitres %}
+                    {% for fiche in chapitre.fiches %}
+                        {% for notice in fiche.noticestextes %}
+                            <a name="texte-{{ fiche.id }}-{{ notice.id }}" />
+                            <h3>{{ notice.nom|raw }}</h3>
+                            <p>{{ notice.contenu|replace({'src="images/': 'src="' ~ asset('bundles/nteantiquitas/images/') })|raw }}</p>
+                            <a href="#bak-texte-{{ fiche.id }}-{{ notice.id }}">Retour</a>
+                            <hr />
+                        {% endfor %}
+                    {% endfor %}
+                {% endfor %}
+            {% endfor %}
+        {% endfor %}
+    {% endfor %}
+
+    <a name="annexes-nn" />
+    <h2>Notices Notes</h2>
+    {% for entity in entities %}
+        {% for theme in entity.themes %}
+            {% for module in theme.modules %}
+                {% for chapitre in module.chapitres %}
+                    {% for fiche in chapitre.fiches %}
+                        {% for notice in fiche.noticesnotes %}
+                            <a name="note-{{ fiche.id }}-{{ notice.id }}" />
+                            <h3>{{ notice.nom|raw }}</h3>
+                            <p>{{ notice.description|replace({'src="images/': 'src="' ~ asset('bundles/nteantiquitas/images/') })|replace({'value="authorDev/': 'value="' ~ asset('bundles/nteantiquitas/authorDev/') })|replace({'src="authorDev/': 'src="' ~ asset('bundles/nteantiquitas/authorDev/') })|raw }}</p>
+                            <p>{{ notice.contenu|replace({'src="images/': 'src="' ~ asset('bundles/nteantiquitas/images/') })|replace({'value="authorDev/': 'value="' ~ asset('bundles/nteantiquitas/authorDev/') })|replace({'src="authorDev/': 'src="' ~ asset('bundles/nteantiquitas/authorDev/') })|raw }}</p>
+                            <a href="#bak-note-{{ fiche.id }}-{{ notice.id }}">Retour</a>
+                            <hr />
+                        {% endfor %}
+                    {% endfor %}
+                {% endfor %}
+            {% endfor %}
+        {% endfor %}
+    {% endfor %}
+
+    <a name="annexes-ni" />
+    <h2>Notices Images</h2>
+    {% for entity in entities %}
+        {% for theme in entity.themes %}
+            {% for module in theme.modules %}
+                {% for chapitre in module.chapitres %}
+                    {% for fiche in chapitre.fiches %}
+                        {% for notice in fiche.noticesimages %}
+                            <a name="image-{{ fiche.id }}-{{ notice.id }}" />
+                            <h3>{{ notice.nom|raw }}</h3>
+                            <p>{{ notice.contenu|replace({'src="images/': 'src="' ~ asset('bundles/nteantiquitas/images/') })|replace({'value="authorDev/': 'value="' ~ asset('bundles/nteantiquitas/authorDev/') })|replace({'src="authorDev/': 'src="' ~ asset('bundles/nteantiquitas/authorDev/') })|raw }}</p>
+                            <a href="#bak-image-{{ fiche.id }}-{{ notice.id }}">Retour</a>
+                            <hr />
+                        {% endfor %}
+                    {% endfor %}
+                {% endfor %}
+            {% endfor %}
+        {% endfor %}
+    {% endfor %}

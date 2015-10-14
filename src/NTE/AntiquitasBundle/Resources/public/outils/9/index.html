@@ -1,0 +1,143 @@
+<html>
+<head>
+<title>Cartes et plan</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<style type="text/css">  
+  <!--
+  .position {
+  	position: absolute;
+  	visibility: hidden;
+  	clip: rect( );
+  }
+  -->
+</style>
+<SCRIPT SRC="common.js"></SCRIPT>
+<script language="JavaScript">
+<!--
+function init(){
+	var s = self.location.search;
+	if ((s == null) || (s.length <= 1)) {
+	}
+	else {
+		var p = getParm(s, 'number', '&');
+//		visibleProp = eval(layerRef + '["insula"+eval(p)]' + styleSwitch + '.visibility="visible"');
+		showlayer('insula'+p);
+	}
+} 
+
+function getParm(theStr, parm, delim) {
+// returns value of parm from string
+	if (theStr.length == 0) {
+		return '';
+	}
+	var sPos = theStr.indexOf(parm + "=");
+  if (sPos == -1) {
+		return '';
+	}
+  sPos = sPos + parm.length + 1;
+  var ePos = theStr.indexOf(delim, sPos);
+  if (ePos == -1) {
+		ePos = theStr.length;
+	}
+  return unescape(theStr.substring(sPos, ePos));
+}
+//-->
+</script>
+<script language="javascript">
+function ferme() {
+
+fenetre=this.window
+
+fenetre.close()
+
+}
+</script>
+</head>
+<body onLoad='init()' text="#000000" link="#660000" vlink="#660000" alink="#660000" background="images/fondmos.gif">
+<table border="0" cellspacing="0" cellpadding="0" width="98%">
+  <tr> 
+    <td width="86" valign="top"> <img src="images/bousole.gif" width="86" height="50"></td>
+    <td width="95%" valign="top"> 
+      <div align="center"><b><font color="#660000" face="Arial, Helvetica, sans-serif" size="+2"><i><br>
+        Atlas / Avenches</i></font></b></div>
+    </td>
+  </tr>
+  <tr> 
+    <td height="15" colspan="2"> <img src="images/lirouge.gif" width="100%" height="1"> 
+    </td>
+  </tr>
+</table>
+<table width="98%" border="0" cellspacing="0" bgcolor="#FFFFFF">
+  <tr>
+    <td>
+      <p><img src="images/plan.gif" usemap="#Map" border="0"> </p>
+      <p><img src="images/vide.gif" width="917" height="70"> 
+        <map name="Map"> 
+          <area shape="circle" coords="95,500,19" href="index.html?number=70">
+          <area shape="circle" coords="220,344,12" href="index.html?number=10">
+          <area shape="circle" coords="239,328,10" href="index.html?number=29">
+          <area shape="circle" coords="318,153,10" href="index.html?number=90">
+          <area shape="circle" coords="194,408,18" href="index.html?number=50">
+          <area shape="circle" coords="138,369,17" href="index.html?number=19">
+          <area shape="circle" coords="254,341,10" href="index.html?number=10">
+        </map>
+      </p>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0">
+  <tr> 
+    <td width="3%"><b><a href="index.html?number=10" style="text-decoration: none;">1</a></b></td>
+    <td width="22%">Forum</td>
+    <td width="3%"><img src="images/vide.gif" width="20" height="1"></td>
+    <td width="3%"><b><a href="index.html?number=10" style="text-decoration: none;">6</a></b></td>
+    <td width="69%">Insula 29</td>
+  </tr>
+  <tr> 
+    <td width="3%"><b><font color="#003333">2</font></b></td>
+    <td width="22%">Th&eacute;atre</td>
+    <td width="3%">&nbsp;</td>
+    <td width="3%"><b><a href="index.html?number=70" style="text-decoration: none;">7</a></b></td>
+    <td width="69%">N&eacute;cropole de la porte de l'ouest</td>
+  </tr>
+  <tr> 
+    <td width="3%"><b><font color="#003333">3</font></b></td>
+    <td width="22%">Amphith&eacute;&acirc;tre</td>
+    <td width="3%">&nbsp;</td>
+    <td width="3%"><b><a href="index.html?number=19" style="text-decoration: none;">8</a></b></td>
+    <td width="69%">Lieu-dit Derri&egrave;re la Tour</td>
+  </tr>
+  <tr> 
+    <td width="3%"><b><a href="index.html?number=10" style="text-decoration: none;">4</a></b></td>
+    <td width="22%">Thermes du Forum</td>
+    <td width="3%">&nbsp;</td>
+    <td width="3%"><b><a href="index.html?number=90" style="text-decoration: none;">9</a></b></td>
+    <td width="69%">En Chaplix</td>
+  </tr>
+  <tr> 
+    <td width="3%"><b><a href="index.html?number=50" style="text-decoration: none;">5</a></b></td>
+    <td width="22%">Sanctuaire du cigognier</td>
+    <td width="3%">&nbsp;</td>
+    <td width="3%">&nbsp;</td>
+    <td width="69%">&nbsp;</td>
+  </tr>
+</table>
+<DIV CLASS="position" ID="insula19" style="left: 119px; top: 329px; width: 749px; height: 304px"><img src="images/plan_19.gif"></DIV>
+<DIV CLASS="position" ID="insula29" style="left: 213px; top: 300px; width: 710px; height: 304px"><img src="images/plan_29.gif"></DIV>
+<DIV CLASS="position" ID="insula70" style="left: 81px; top: 454px; width: 709px; height: 304px"><img src="images/plan_70.gif"></DIV>
+<DIV CLASS="position" ID="insula90" style="left: 278px; top: 109px; width: 700px; height: 304px"><img src="images/plan_90.gif"></DIV>
+<DIV CLASS="position" ID="insula50" style="left: 175px; top: 356px; width: 709px; height: 304px"><img src="images/plan_50.gif"></DIV>
+<DIV CLASS="position" ID="insula10" style="left: 213px; top: 299px; width: 701px; height: 304px"><img src="images/plan_10.gif"></DIV>
+<DIV CLASS="position" ID="insula33" style="left: 205px; top: 304px; width: 707px; height: 304px"><img src="images/plan_33.gif"></DIV>
+<hr size="1">
+<TABLE WIDTH="100%" CELLPADDING="2">
+<TR>
+	<TD WIDTH="*" align="right"><FONT SIZE="-1">Avec le soutien du <A HREF="http://www.unifr.ch/nte" target="_blank">Centre NTE</A>, <A HREF="mailto:***REMOVED***">gc</A> / 7 f&eacute;vrier 2002</FONT>
+	</TD>
+</TR>
+</TABLE>
+<p align="center"><font face="Arial, Helvetica, sans-serif"><b><a href=javascript:ferme()>Fermer 
+  la fen&ecirc;tre</a></b></font> </p>
+</body>
+</html>

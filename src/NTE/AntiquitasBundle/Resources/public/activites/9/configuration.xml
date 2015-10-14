@@ -1,0 +1,20 @@
+<antiquitas>
+  <toolMenu srcswf="../outil_MenuNav_M9M10FR.swf"/>
+  <!-- Titre et fichier qui s'affiche SOUS toutes les étapes sauf la consigne -->
+  <activity srcswf="" x="" y="">L'expiation des prodiges</activity>
+  <!-- La consigne qui s'affiche à la première page  -->
+  <consigne srcswf="../accueil_Dyn_short_Title_Center.swf" x="" y=""><b>Consigne</b><br/><br/>A Rome, l’expiation des prodiges obéit à une procédure très précise qui vise à rétablir l’accord entre les hommes et les dieux (pax deorum). Suivez pas à pas les différentes étapes de cette procédure.</consigne>
+  <folder label="Exercice 1" srcswf="Texte-TiteLive.swf" x="" y="">
+    <pagefile x="" y="">1-1.swf</pagefile>
+    <pagefile>1-2.swf</pagefile>
+    <pagefile>1-3.swf</pagefile>
+  </folder>
+  <folder label="Exercice 2" srcswf="Texte-TiteLive.swf" x="" y="">
+    <pagefile x="0" y="">2-1.swf</pagefile>
+    <pagefile x="0" y="">2-2.swf</pagefile>
+  </folder>
+  <folder label="Bilan">
+    <!-- Une page bilan peut être déclarée avec le MovieClip à imprimer dans le fichier bilan.swf-->
+    <pagefile  x="" y="" typeBilan="true" typePrint="true" mcToPrint="printMe">bilan.swf</pagefile>
+  </folder>
+</antiquitas>

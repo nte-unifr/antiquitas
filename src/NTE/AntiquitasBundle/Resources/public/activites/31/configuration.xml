@@ -1,0 +1,29 @@
+<antiquitas>
+  <toolMenu srcswf="../outil_MenuNav_M18_FR.swf"/>
+  <!-- Titre et fichier qui s'affiche SOUS toutes les étapes sauf la consigne -->
+  <activity srcswf="" x="" y="">Datation, interprétation et commentaire: Athènes, stèle funéraire</activity>
+  <!-- La consigne qui s'affiche à la première page  -->
+  <consigne srcswf="accueil.swf" x="" y=""/>
+  <folder label="Présentation" srcswf="" x="" y="" depth="">
+    <pagefile x="" y="">e1_fiche.swf</pagefile>
+  </folder>
+  <folder label="Interprétation" srcswf="traduction.swf" x="" y="120" depth="top">
+    <pagefile x="" y="">q1_CC.swf</pagefile>
+    <pagefile x="" y="">q2_CC.swf</pagefile>
+    <pagefile x="" y="">q2b_CC.swf</pagefile>
+  </folder>
+  <folder label="Datation" srcswf="traduction.swf" x="" y="" depth="">
+    <pagefile x="" y="">q3_CC.swf</pagefile>
+    <pagefile x="" y="">q4_CC.swf</pagefile>
+    <pagefile x="" y="">q5_CC.swf</pagefile>
+    <pagefile x="" y="">q6_CC.swf</pagefile>
+    <pagefile x="" y="">q7_CC.swf</pagefile>
+    <pagefile x="" y="">q8_CC.swf</pagefile>
+    <pagefile x="" y="">q9_CC.swf</pagefile>
+    <pagefile x="" y="">q10_CC.swf</pagefile>
+    <pagefile x="" y="">q11_CC.swf</pagefile>
+  </folder>
+  <folder label="Commentaire" srcswf="" x="" y="">
+    <pagefile x="" y="">bilan1.swf</pagefile>
+  </folder>
+</antiquitas>

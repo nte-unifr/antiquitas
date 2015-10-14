@@ -1,0 +1,1 @@
+nbrErreurs=3&reponse1=Q E M I S Q O K L E E S&correctLetter1=Q&comment1=Attention!%20Il%20faut%20reconnaitre%20dans%20cette%20ligne%20un%20theta.&reponse2=N E O K L E O S&reponse3=F R E R I O S&correctLetter3=W&comment3=Un%20omicron%20est%20ici%20difficile%20a%20lire.&eof=true

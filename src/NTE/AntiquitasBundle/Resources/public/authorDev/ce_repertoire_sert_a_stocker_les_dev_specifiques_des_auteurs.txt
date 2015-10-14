@@ -1,0 +1,2 @@
+Ce répertoire sert à stocker les développement spécifiques des auteurs.
+David TOUVET, 2005-03-07

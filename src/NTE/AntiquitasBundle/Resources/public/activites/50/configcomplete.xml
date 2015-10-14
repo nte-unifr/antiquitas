@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<root>
+  <instructions><b>Consigne :</b><br/><br/>Introduisez dans chaque champ chaque mot séparément en majuscules puis, en vous aidant des outils, développez les abréviations en minuscules.<br/>Pour les lettres qui ont disparu dans une lacune de la pierre, notez-les toujours entre [ ] en majuscules.<br/>Quand un mot commence à la fin d'une ligne et se poursuit à la ligne suivante, mentionnez que le mot est coupé en ajoutant un - après les premières lettres.  Vous disposez de 3 essais.</instructions>
+  <comment_start/>
+  <comment_word_tiret/>
+  <comment_default_true>Votre réponse est correcte.</comment_default_true>
+  <comment_default_false>Votre réponse n'est pas correcte. Vous pouvez obtenir la solution en cliquant sur l'image</comment_default_false>
+  <record>
+    <answer>Marcus</answer>
+  </record>
+  <record>
+    <answer>FLavius</answer>
+  </record>
+  <record>
+    <answer>MARCIANUS</answer>
+  </record>
+  <record>
+    <answer>MEDIAM</answer>
+  </record>
+  <record>
+    <answer>AREam</answer>
+  </record>
+  <record>
+    <answer>ET</answer>
+  </record>
+  <record>
+    <answer>EXEDRAM</answer>
+  </record>
+  <record>
+    <answer>TESSELLA</answer>
+  </record>
+  <record>
+    <answer>STRAVit</answer>
+  </record>
+  <record>
+    <answer>De</answer>
+  </record>
+  <record>
+    <answer>Suo</answer>
+  </record>
+  <record>
+    <answer>[Posuit]</answer>
+<comment>deux restitutions sont possibles: [Posuit] ou [Ponendum Curavit]</comment>
+  </record>
+</root>

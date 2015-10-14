@@ -1,0 +1,1 @@
+coinName=Inventarkarte&coinWeight=12,607g&EOF=true&

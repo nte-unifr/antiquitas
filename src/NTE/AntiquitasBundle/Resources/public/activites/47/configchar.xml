@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<root>
+  <instructions><b>Consigne :</b><br/><br/>Lisez attentivement l'inscription présente dans la figure ci-contre, puis introduisez dans chaque champ chaque mot séparément en majuscules, tel que vous le voyez, sans chercher à résoudre les abréviations (ne pas indiquer les signes de séparation). Vous disposez de 3 essais.</instructions>
+  <comment_start/>
+  <comment_word_tiret/>
+  <comment_default_true>Votre réponse est correcte</comment_default_true>
+  <comment_default_false>Votre réponse n'est pas correcte. Vous pouvez obtenir la solution en cliquant sur l'image</comment_default_false>
+  <record>
+    <answer>DEAE</answer>
+  </record>
+  <record>
+    <answer>AVENT</answer>
+    <comment><b>Notice : </b>Observez la ligature du N et du T.</comment>
+  </record>
+  <record>
+    <answer>T</answer>
+  </record>
+  <record>
+    <answer>TERTIUS</answer>
+  </record>
+  <record>
+    <answer>SEVERUS</answer>
+  </record>
+  <record>
+    <answer>CVR</answer>
+<comment_false>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule.</comment_false>
+  </record>
+  <record>
+    <answer>COLON</answer>
+  </record>
+  <record>
+    <answer>IDEMQUE</answer>
+  </record>
+  <record>
+    <answer>ALL</answer>
+  </record>
+  <record>
+    <answer>CVI</answer>
+<comment_false>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule.</comment_false>
+  </record>
+  <record>
+    <answer>INCOLAE</answer>
+  </record>
+  <record>
+    <answer>AVENTICENS</answer>
+  </record>
+  <record>
+    <answer>PRIM</answer>
+  </record>
+  <record>
+    <answer>OMNIVM</answer>
+    <comment><b>Notice : </b>Observez la ligature du N et du T.<br/>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule.</comment>
+  </record>
+  <record>
+    <answer>OB</answer>
+  </record>
+  <record>
+    <answer>EIVS</answer>
+<comment_false>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule.</comment_false>
+  </record>
+  <record>
+    <answer>ERGA</answer>
+  </record>
+  <record>
+    <answer>SE</answer>
+  </record>
+  <record>
+    <answer>MERITA</answer>
+  </record>
+  <record>
+    <answer>T[A]BVLAM</answer>
+    <comment_false><b>Notice : </b>Inscrivez [.] à la place de la lettre illisible.<br/>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule.</comment_false>
+  </record>
+  <record>
+    <answer>ARG</answer>
+  </record>
+  <record>
+    <answer>P</answer>
+  </record>
+  <record>
+    <answer>[.]L</answer>
+    <comment_false><b>Notice : </b>Inscrivez [.] à la place de la lettre illisible.</comment_false>
+  </record>
+  <record>
+    <answer>POSVER</answer>
+<comment_false>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule.</comment_false>
+  </record>
+  <record>
+    <answer>DONVM</answer>
+<comment_false>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule.</comment_false>
+  </record>
+  <record>
+    <answer>D</answer>
+  </record>
+  <record>
+    <answer>S</answer>
+  </record>
+  <record>
+    <answer>P</answer>
+  </record>
+  <record>
+    <answer>EX</answer>
+  </record>
+  <record>
+    <answer>S</answer>
+  </record>
+  <record>
+    <answer>VCC</answer>
+  </record>
+  <record>
+    <answer>L</answer>
+  </record>
+  <record>
+    <answer>D</answer>
+  </record>
+  <record>
+    <answer>[.]</answer>
+    <comment_false><b>Notice : </b>Inscrivez [.] à la place de la lettre illisible.</comment_false>
+  </record>
+  <record>
+    <answer>[.]</answer>
+    <comment_false><b>Notice : </b>Inscrivez [.] à la place de la lettre illisible.</comment_false>
+  </record>
+</root>

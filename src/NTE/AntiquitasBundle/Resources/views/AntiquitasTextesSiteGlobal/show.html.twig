@@ -1,0 +1,39 @@
+{% extends 'NTEAntiquitasBundle::layout.html.twig' %}
+
+{% block body -%}
+    <script type="text/javascript">
+        var toolsWindowOptions = 
+            "toolbar=yes"
+            +",location=yes"
+            +",directories=no"
+            +",status=yes" 
+            +",menubar=no"
+            +",scrollbars=yes"
+            +",resizable=yes" 
+            +",width=800"
+            +",height=593";
+
+        var toolsWindow;
+
+        function OpenToolsWindow(theFile) {
+            if ((toolsWindow == null) || (toolsWindow.closed)){
+                toolsWindow = this.open(theFile, "toolsWindow", toolsWindowOptions);
+            } 
+            else {
+                toolsWindow.location.replace(theFile);
+            }
+            if (window.focus)
+                toolsWindow.focus(); 
+        }
+    </script>
+
+    <h1>{{ titre|capitalize|striptags }}</h1>
+
+    {% set locale = app.request.get('_locale') %}
+    {% for texte in entities %}
+        {{ attribute(texte, locale)|replace({'src="images/': 'src="' ~ asset('bundles/nteantiquitas/images/') })|raw }}
+    {% endfor %}
+
+
+
+{% endblock %}

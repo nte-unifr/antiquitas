@@ -1,0 +1,13 @@
+<antiquitas>
+  <toolMenu srcswf="../outil_MenuNav_M18_FR.swf"/>
+  <!-- Titre et fichier qui s'affiche SOUS toutes les étapes sauf la consigne -->
+  <activity srcswf="" x="" y="">La forme des lettres</activity>
+  <!-- La consigne qui s'affiche à la première page  -->
+  <consigne srcswf="accueil.swf" x="" y=""></consigne>
+  <folder label="Activité" srcswf="" x="" y="" depth="top">
+    <pagefile x="" y="">q1_DD1_lettres.swf</pagefile>
+  </folder>
+  <folder label="Bilan" srcswf="" x="" y="">
+    <pagefile x="" y="">bilan.swf</pagefile>
+  </folder>
+</antiquitas>

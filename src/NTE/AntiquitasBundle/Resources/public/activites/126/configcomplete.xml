@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<root>
+  <instructions><b>Consigne :</b><br/><br/>Introduisez dans chaque champ chaque mot séparément en majuscules puis, en vous aidant des outils, développez les abréviations en minuscules.<br/>Pour les lettres qui ont disparu dans une lacune de la pierre, notez-les toujours entre [ ] en majuscules.<br/>Quand un mot commence à la fin d'une ligne et se poursuit à la ligne suivante, mentionnez que le mot est coupé en ajoutant un - après les premières lettres.  Vous disposez de 3 essais.</instructions>
+  <comment_start/>
+  <comment_word_tiret/>
+  <comment_default_true>Votre réponse est correcte.</comment_default_true>
+  <comment_default_false>Votre réponse n'est pas correcte. Vous pouvez obtenir la solution en cliquant sur l'image</comment_default_false>
+  <record>
+    <answer>Dis</answer>
+  </record>
+  <record>
+    <answer>Manibus</answer>
+    <comment><b>Notice :</b> Il s'agit de la formule initiale qui place la pierre sous la protection des dieux infernaux, les Dieux Mânes (Dis Manibus). Ensuite viennent les noms du défunt.</comment>
+  </record>
+  <record>
+    <answer>Decimi</answer>
+  </record>
+  <record>
+    <answer>IVLii</answer>
+<comment>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule. </comment>
+  </record>
+  <record>
+    <answer>IVNIani</answer>
+<comment>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule. </comment>
+  </record>
+  <record>
+    <answer>IVLia</answer>
+<comment>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule. </comment>
+  </record>
+  <record>
+    <answer>TIT-</answer>
+<comment>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule. <br/><b>Attention :</b> Ajoutez le - pour indiquer que le mot s'étend sur la ligne suivante.</comment>
+  </record>
+  <record>
+    <answer>VLINa</answer>
+<comment>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule.<br/><b>Notice :</b> La lecture Titulina semble confirmée par une inscription de Metz dans laquelle une affranchie porte ce nom.</comment>
+  </record>
+  <record>
+    <answer>VXor</answer>
+<comment>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule. </comment>
+  </record>
+</root>

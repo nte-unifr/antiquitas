@@ -1,0 +1,32 @@
+<antiquitas>
+  <toolMenu srcswf="../outil_MenuNav_M19_FR.swf"/>
+  <!-- Titre et fichier qui s'affiche SOUS toutes les étapes sauf la consigne -->
+  <activity srcswf="" x="" y="">Avenches: <br/>autel en calcaire</activity>
+  <!-- La consigne qui s'affiche à la première page  -->
+  <consigne srcswf="accueil.swf" x="" y=""/>
+  <folder label="Présentation" srcswf="" x="" y="">
+    <pagefile x="" y="">intro.swf</pagefile>
+  </folder>
+  <folder label="Transcription" srcswf="" x="" y="">
+    <pagefile x="" y="">transres_CR3_char.swf</pagefile>
+  </folder>
+  <folder label="Restitution" srcswf="" x="" y="">
+    <pagefile x="" y="">transres_CR3_comp.swf</pagefile>
+  </folder>
+  <folder label="Traduction" srcswf="" x="" y="">
+    <pagefile x="" y="">traduction_QR.swf</pagefile>
+  </folder>
+  <folder label="Interprétation" srcswf="traduction.swf" depth="top" x="" y="">
+    <pagefile x="" y="">int_CC_1.swf</pagefile>
+    <pagefile x="" y="">int_CC_2.swf</pagefile>
+    <pagefile x="" y="">int_CC_3.swf</pagefile>
+    <pagefile x="" y="">int_CC_4.swf</pagefile>
+    <pagefile x="" y="">int_CC_5.swf</pagefile>
+    <pagefile x="" y="">int_CC_6.swf</pagefile>
+    <pagefile x="" y="">int_CC_7.swf</pagefile>
+    <pagefile x="" y="">int_CC_8.swf</pagefile>
+  </folder>
+  <folder label="Commentaire" srcswf="" x="" y="">
+    <pagefile x="" y="">bilan1.swf</pagefile>
+  </folder>
+</antiquitas>

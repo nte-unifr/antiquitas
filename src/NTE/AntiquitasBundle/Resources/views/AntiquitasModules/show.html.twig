@@ -1,0 +1,337 @@
+{% extends 'NTEAntiquitasBundle::layout.html.twig' %}
+
+{% block body -%}
+
+        <div class="row-fluid" style="text-align: right;">
+            <a href="javascript:OpenToolsWindow('{{ path('outils_show', {'id': entity.id, 'type': 'lexika'}) }}');" role="button" class="btn">{{ 'Lexika' | trans }}</a>
+            <a href="javascript:OpenToolsWindow('{{ path('outils_show', {'id': entity.id, 'type': 'atlas'}) }}');" role="button" class="btn">{{ 'Atlas' | trans }}</a>
+            <a href="javascript:OpenToolsWindow('{{ path('outils_show', {'id': entity.id, 'type': 'chronologie'}) }}');" role="button" class="btn">{{ 'Chronologie' | trans }}</a>
+            <a href="javascript:OpenToolsWindow('{{ path('outils_show', {'id': entity.id, 'type': 'ressource'}) }}');" role="button" class="btn">{{ 'Ressources' | trans }}</a>
+            <hr />
+        </div>
+        
+        {#<!-- Modals -->
+        <div id="modal-lexika" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="myModalLabel">{{ 'Lexika' | trans }}</h3>
+            </div>
+            <div class="modal-body">
+                {% for outil in entity.outils %}
+                    {% if 'lexika' == outil.idOutil.idType %}<ul><li>
+                        {% if 'href' in outil.idOutil.nom %}
+                            {{ outil.idOutil.nom|raw }}
+                        {% else %}
+                            <a href="javascript:OpenToolsWindow('{{ asset('bundles/nteantiquitas/outils') }}/{{ outil.idOutil.id }}/index.html');">{{ outil.idOutil.nom|raw }}</a>
+                        {% endif %}</li></ul>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Fermer</button>
+            </div>
+        </div>
+        <div id="modal-atlas" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="myModalLabel">{{ 'Atlas' | trans }}</h3>
+            </div>
+            <div class="modal-body">
+                {% for outil in entity.outils %}
+                    {% if 'atlas' == outil.idOutil.idType %}<ul><li>
+                        {% if 'href' in outil.idOutil.nom %}
+                            {{ outil.idOutil.nom|raw }}
+                        {% else %}
+                            <a href="javascript:OpenToolsWindow('{{ asset('bundles/nteantiquitas/outils') }}/{{ outil.idOutil.id }}/index.html');">{{ outil.idOutil.nom|raw }}</a>
+                        {% endif %}</li></ul>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Fermer</button>
+            </div>
+        </div>
+        <div id="modal-chrono" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="myModalLabel">{{ 'Chronologie' | trans }}</h3>
+            </div>
+            <div class="modal-body">
+                {% for outil in entity.outils %}
+                    {% if 'chronologie' == outil.idOutil.idType %}<ul><li>
+                        {% if 'href' in outil.idOutil.nom %}
+                            {{ outil.idOutil.nom|raw }}
+                        {% else %}
+                            <a href="javascript:OpenToolsWindow('{{ asset('bundles/nteantiquitas/outils') }}/{{ outil.idOutil.id }}/index.html');">{{ outil.idOutil.nom|raw }}</a>
+                        {% endif %}</li></ul>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Fermer</button>
+            </div>
+        </div>
+        <div id="modal-ressources" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="myModalLabel">{{ 'Ressources' | trans }}</h3>
+            </div>
+            <div class="modal-body">
+                {% for outil in entity.outils %}
+                    {% if 'ressource' == outil.idOutil.idType %}<ul><li>
+                        {% if 'href' in outil.idOutil.nom %}
+                            {{ outil.idOutil.nom|raw }}
+                        {% else %}
+                            <a href="javascript:OpenToolsWindow('{{ asset('bundles/nteantiquitas/outils') }}/{{ outil.idOutil.id }}/index.html');">{{ outil.idOutil.nom|raw }}</a>
+                        {% endif %}</li></ul>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">{{ 'Fermer' | trans }}</button>
+            </div>
+        </div>
+        <!-- Fin des Modals -->#}
+
+    <h1><a href="{{ path('modules') }}">{{ 'Modules' | trans }}</a> > {{ entity.nom|raw }}</h1>
+    {% thumbnail entity.media, 'reference' %}
+
+    <div class="row-fluid">
+        <br /><strong>
+    {{ entity.auteurs|length > 1 ? 'Auteurs'|trans : 'Auteur'|trans }}: 
+    {% for auteur in entity.auteurs %}
+        {{ auteur }}{% if loop.index == entity.auteurs|length - 1 %} et {%- elseif loop.index < entity.auteurs|length -%},{%- endif -%}
+    {% endfor %}
+        </strong>
+    </div>
+
+    {% if entity.introductionResume != '' or entity.introduction != '' %}
+    <div class="row-fluid">
+        <div class="span2">
+            <h2>{{ 'Introduction' | trans }}</h2>
+        </div>
+        <div class="span10">
+        {% if entity.introduction != '' %}
+            <br />
+            <a href="#modal-intro" role="button" class="btn" data-toggle="modal">{{ 'Voir' | trans }}</a>
+            <div id="modal-intro" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h3 id="myModalLabel">{{ 'Introduction' | trans }}</h3>
+                </div>
+                <div class="modal-body">
+                    {{ entity.introduction|replace({'src="images/': 'src="' ~ asset('bundles/nteantiquitas/images/') })|raw }}
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" data-dismiss="modal" aria-hidden="true">{{ 'Fermer' | trans }}</button>
+                </div>
+            </div>
+        {% else %}
+            {{ entity.introductionResume|replace({'src="images/': 'src="' ~ asset('bundles/nteantiquitas/images/') })|replace({"OpenToolsWindow('activites/": "OpenToolsWindow('" ~ asset('bundles/nteantiquitas/activites/') })|raw }}
+        {% endif %}
+        </div>
+    </div>
+    <hr />
+    {% endif %}
+
+    {% for chapitre in entity.chapitres %}
+        <h2>{{ 'Chapitre' | trans }} {{ chapitre.position }} : {{ chapitre|raw }}</h2>
+
+        <div class="row-fluid">
+            <div class="span2">
+                <strong>{{ 'Thème' | trans }} :</strong>
+            </div>
+            <div class="span10">
+                {{ chapitre.theme|raw }}
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span2">
+                <strong>{{ 'Objectif' | trans }} :</strong>
+            </div>
+            <div class="span10">
+                {{ chapitre.objectif|raw }}
+            </div>
+        </div>
+
+        <div class="row-fluid">
+            <div class="span6">
+            <h3>{{ 'Livre électronique' | trans }}</h3>
+            {% for fiche in chapitre.fiches %}
+                <h4>{{ chapitre.position }}.{{ fiche.position }} <a href="{{ path('fiches_show', { 'id': fiche.id }) }}">{{ fiche|raw }}</a></h4>
+                <ul>
+                
+                </ul>
+            {% endfor %}
+            </div>
+            <div class="span6">
+            <h3>{{ 'Cahier d\'activités' | trans }}</h3>
+            {% for activite in chapitre.activites %}
+                {% if activite.idType.id in [1, 3] %}
+                <h4>{% thumbnail activite.media, 'thumb' with {'style' : 'float: left; width: 60px;'} %} &nbsp;<a href="javascript:OpenToolsWindow('{{ asset('bundles/nteantiquitas/activites') }}/{{ activite.id }}/index.html');">{{ activite }}</a></h4>
+                {% else %}
+                <h4>{% thumbnail activite.media, 'thumb' with {'style' : 'float: left; width: 60px;'} %} &nbsp;<a href="javascript:OpenToolsWindow('{{ path('activites_show', {'id': activite.id}) }}');">{{ activite.nom|raw }}</a></h4>
+                {% endif %}
+                
+                <!-- Modal -->
+                <div style="clear:both;"></div>
+                <ul>
+                
+                </ul>
+            {% endfor %}
+                <div id="modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h3 id="myModalLabel">Activité</h3>
+                    </div>
+                    <div class="modal-body">
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn" data-dismiss="modal" aria-hidden="true">Fermer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+    {% endfor %}
+
+    {% if (noticestextes_type4|length + noticestextes_type5|length + noticesliens|length + noticesimages|length + noticesnotes|length != 0) or (entity.bibliographie != '') %}
+    <h2>{{ 'Ressources liées à ce module' | trans }}</h2>
+    
+        <div class="row-fluid">
+            <div class="span2">
+            </div>
+            <div class="span8">
+                {% if noticestextes_type4|length + noticestextes_type5|length > 0 %}
+                    <a href="#modal-textes" role="button" class="btn" data-toggle="modal">{{ 'Textes' | trans }}</a>
+                    <div id="modal-textes" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h3 id="myModalLabel">{{ 'Textes' | trans }}</h3>
+                        </div>
+                        <div class="modal-body">
+                            <h3>{{ 'Textes littéraires' | trans }}</h3>
+                            {% for notice in noticestextes_type5 %}
+                                <a href="{{ path('noticestextes_show', {'id': notice.id}) }}">{{ notice.nom|raw }}</a> (type = {{ notice.idType.id }} {{ notice.idType }})<br />
+                            {% endfor %}
+                            <h3>{{ 'Inscriptions' | trans }}</h3>
+                            {% for notice in noticestextes_type4 %}
+                                <a href="{{ path('noticestextes_show', {'id': notice.id}) }}">{{ notice.nom|raw }}</a> (type = {{ notice.idType.id }} {{ notice.idType }})<br />
+                            {% endfor %}
+                            {% for activite in activites %}
+                                <a href="javascript:OpenToolsWindow('{{ asset('bundles/nteantiquitas/activites') }}/{{ activite.id }}/index.html');">{{ activite.nom|raw }}</a> (type = {{ activite.id }})<br />
+                            {% endfor %}
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn" data-dismiss="modal" aria-hidden="true">{{ 'Fermer' | trans }}</button>
+                        </div>
+                    </div>
+                {% endif %}
+                {% if noticesimages|length > 0 %}
+                    <a href="#modal-images" role="button" class="btn" data-toggle="modal">{{ 'Images' | trans }}</a>
+                    <div id="modal-images" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h3 id="myModalLabel">{{ 'Images' | trans }}</h3>
+                        </div>
+                        <div class="modal-body">
+                            {% for notice in noticesimages %}
+                            <div class="row-fluid">
+                                <div class="span1"></div><div class="span2">{% thumbnail notice.media, 'thumb' with {'style': 'height: 20px;'} %}</div>
+                                <div class="span9"><a href="{{ path('noticesimages_show', {'id': notice.id}) }}">{{ notice.nom|raw }}</a> ({{ 'Chapitre' | trans }} {{ notice.idFiche.idChapitre.position }})</div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn" data-dismiss="modal" aria-hidden="true">{{ 'Fermer' | trans }}</button>
+                        </div>
+                    </div>
+                {% endif %}
+                {% if noticesnotes|length > 0 %}
+                    <a href="#modal-notes" role="button" class="btn" data-toggle="modal">{{ 'Notes' | trans }}</a>
+                    <div id="modal-notes" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h3 id="myModalLabel">{{ 'Notes' | trans }}</h3>
+                        </div>
+                        <div class="modal-body">
+                            {% for notice in noticesnotes|sort %}
+                                <a href="{{ path('noticesnotes_show', {'id': notice.id}) }}">{{ notice.nom|raw }}</a><br />
+                            {% endfor %}
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn" data-dismiss="modal" aria-hidden="true">{{ 'Fermer' | trans }}</button>
+                        </div>
+                    </div>
+                {% endif %}
+                {% if noticesliens|length > 0 %}
+                    <a href="#modal-liens" role="button" class="btn" data-toggle="modal">{{ 'Liens' | trans }}</a>
+                    <div id="modal-liens" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h3 id="myModalLabel">{{ 'Liens' | trans }}</h3>
+                        </div>
+                        <div class="modal-body">
+                            <ul>
+                            {% for notice in noticesliens|sort %}
+                                <li><a href="{{ notice.url }}" target="_blank">{{ notice.nom|raw }}</a><br />
+                                {{ notice.description|raw }}</li>
+                            {% endfor %}
+                            </ul>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn" data-dismiss="modal" aria-hidden="true">{{ 'Fermer' | trans }}</button>
+                        </div>
+                    </div>
+            {% endif %}
+            </div>
+            <div class="span2">
+                {% if entity.bibliographie != '' %}<a href="#modal-biblio" role="button" class="btn" data-toggle="modal">{{ 'Bibliographie' | trans }}</a>{% endif %}
+            </div>
+        </div>
+        {% endif %}
+        {% if entity.bibliographie != '' %}
+        <div id="modal-biblio" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="myModalLabel">{{ 'Bibliographie' | trans }}</h3>
+            </div>
+            <div class="modal-body">
+                {{ entity.bibliographie|raw }}
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">{{ 'Fermer' | trans }}</button>
+            </div>
+        </div>
+        {% endif %}
+
+    {% if entity.conclusion != '' or entity.conclusionResume != '' %}
+    <hr />
+    <div class="row-fluid">
+        <div class="span2">
+            <h2>{{ 'Conclusion' | trans }}</h2>
+        </div>
+        <div class="span10">
+            <br />
+            {% if entity.conclusion != '' %}
+            <a href="#modal-conclusion" role="button" class="btn" data-toggle="modal">{{ 'Voir' | trans }}</a>
+            <div id="modal-conclusion" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h3 id="myModalLabel">{{ 'Conclusion' | trans }}</h3>
+                </div>
+                <div class="modal-body">
+                    {{ entity.conclusion|replace({'src="images/': 'src="' ~ asset('bundles/nteantiquitas/images/') })|raw }}
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" data-dismiss="modal" aria-hidden="true">{{ 'Fermer' | trans }}</button>
+                </div>
+            </div>
+            {% else %}
+                {{ entity.conclusionResume|replace({'src="images/': 'src="' ~ asset('bundles/nteantiquitas/images/') })|replace({"OpenToolsWindow('activites/": "OpenToolsWindow('" ~ asset('bundles/nteantiquitas/activites/') })|raw }}
+            {% endif %}
+        </div>
+    </div>
+    {% endif %}
+    <br />
+{% endblock %}

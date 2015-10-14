@@ -1,0 +1,24 @@
+<antiquitas>
+  <toolMenu srcswf="../outil_MenuNav_M17_FR.swf"/>
+  <!-- Titre et fichier qui s'affiche SOUS toutes les étapes sauf la consigne -->
+  <activity srcswf="coin.swf" x="20" y="120" depth="top">MONNAIES DE L'EMPIRE ROMAIN : N°5</activity>
+  <!-- La consigne qui s'affiche à la première page  -->
+  <consigne srcswf="../accueil_Dyn.swf" x="" y="" depth="top"><b>Présentation de l'exercice</b><br/><br/>À l’aide de monnaies choisies comme exemples, vous apprenez successivement à déchiffrer le message iconographique des pièces et à l’utiliser comme source historique.</consigne>
+  <folder label="Métrologie" srcswf="" x="" y="" depth="">
+<pagefile x="" y="">1-1.swf</pagefile>
+  </folder>
+  <folder label="Légende " srcswf="" x="" y="" depth="">
+    <pagefile x="" y="">2-1.swf</pagefile>
+    <pagefile x="" y="">2-2.swf</pagefile>
+  </folder>
+  <folder label="Iconographie" srcswf="" x="" y="" depth="">
+    <pagefile x="" y="">3-1.swf</pagefile>
+    <pagefile x="" y="">3-2.swf</pagefile>
+  </folder>
+  <folder label="Commentaire" srcswf="" x="" y="" depth="">
+    <pagefile x="" y="">4-1.swf</pagefile>
+    <pagefile x="" y="">4-2.swf</pagefile>
+    <pagefile x="" y="">4-3.swf</pagefile>
+  </folder>
+
+</antiquitas>

@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<root>
+  <instructions><b>Consigne :</b><br/><br/>Introduisez dans chaque champ chaque mot séparément en majuscules puis, en vous aidant des outils, développez les abréviations en minuscules.<br/>Pour les lettres qui ont disparu dans une lacune de la pierre, notez-les toujours entre [ ] en majuscules.<br/>Quand un mot commence à la fin d'une ligne et se poursuit à la ligne suivante, mentionnez que le mot est coupé en ajoutant un - après les premières lettres.  Vous disposez de 3 essais.</instructions>
+  <comment_start></comment_start>
+  <comment_word_tiret></comment_word_tiret>
+  <comment_default_true>Votre réponse est correcte.</comment_default_true>
+  <comment_default_false>Votre réponse n'est pas correcte. Vous pouvez obtenir la solution en cliquant sur l'image</comment_default_false>
+<record>
+    <answer>Caio</answer>
+  </record>
+  <record>
+    <answer>VALERio</answer>
+  </record>
+  <record>
+    <answer>Cai</answer>
+  </record>
+  <record>
+    <answer>Filio</answer>
+  </record>
+  <record>
+    <answer>FABia</answer>
+  </record>
+  <record>
+    <answer>CA-</answer>
+<comment_false><b>Attention</b> : N'oubliez pas de noter le - marquant que le mot s'étend jusqu'à la ligne suivante.</comment_false>
+  </record>
+  <record>
+    <answer>MILLO</answer>
+  </record>
+  <record>
+    <answer>QVOI</answer>
+<comment><b>Notice : </b>archaïsme littéraire pour <i>cui</i>. C'est un élément utile pour la datation de l'inscription.<br/>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule.</comment>
+  </record>
+  <record>
+    <answer>PVBLICE</answer>
+<comment_false>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule.</comment_false>
+
+  </record>
+  <record>
+    <answer>FVNVS</answer>
+<comment_false>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule.</comment_false>
+  </record>
+  <record>
+    <answer>HAEDVORVM</answer>
+<comment_false>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule.</comment_false>
+  </record>
+  <record>
+    <answer>CIVITAS</answer>
+  </record>
+  <record>
+    <answer>ET</answer>
+  </record>
+  <record>
+    <answer>HELVETi</answer>
+  </record>
+  <record>
+    <answer>DECRE-</answer>
+<comment_false><b>Attention : </b>Ce n'est que le début du mot! N'oubliez pas de noter le - pour indiquer que le mot a une suite à la ligne suivante.</comment_false>
+  </record>
+  <record>
+    <answer>VERVNT</answer>
+<comment_false>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule.</comment_false>
+  </record>
+  <record>
+    <answer>ET</answer>
+  </record>
+  <record>
+    <answer>CIVITAS</answer>
+  </record>
+  <record>
+    <answer>HELVETiorum</answer>
+  </record>
+  <record>
+    <answer>QVA</answer>
+<comment_false>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule.</comment_false>
+  </record>
+  <record>
+    <answer>PAGATIM</answer>
+  </record>
+  <record>
+    <answer>QVA</answer>
+<comment><i>qua...qua </i>est un archaïsme littéraire pour <i>et...et</i>. C'est un élément utile pour la datation de l'inscription (le deuxième quart du Ier s. ap. J.-C.).<br/>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule.</comment>
+  </record>
+  <record>
+    <answer>PVBLICE</answer><comment_false>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule.</comment_false>
+  </record>
+  <record>
+    <answer>STATVAS</answer><comment_false>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule.</comment_false>
+  </record>
+  <record>
+    <answer>DECREVIT</answer>
+<comment>inscrire [.]</comment>
+  </record>
+  <record>
+    <answer>I[u]LIA</answer>
+<comment>I[.]LIA : inscrivez entre les crochets la lettre manquante en minuscule.</comment>
+  </record>
+  <record>
+    <answer>Cai</answer>
+  </record>
+  <record>
+    <answer>IVLI</answer>
+<comment_false>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule.</comment_false>
+  </record>
+  <record>
+    <answer>CAMILLI</answer>
+  </record>
+  <record>
+    <answer>Filia</answer>
+  </record>
+  <record>
+    <answer>FESTILLA</answer>
+  </record>
+  <record>
+    <answer>EX</answer>
+  </record>
+  <record>
+    <answer>TESTAMENTO</answer>
+  </record>
+</root>

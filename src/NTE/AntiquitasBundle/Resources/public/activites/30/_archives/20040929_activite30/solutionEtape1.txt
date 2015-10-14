@@ -1,0 +1,1 @@
+nbrErreurs=3&reponse1=D E L F O I E D W K A N&reponse2=C I O I S P R O M A N T&falseLetter2=G&correctLetter2=P&comment2=Attention!%20Le%20deuxieme%20jambage%20du%20%22pi%22%20n'est pour%20ainsi%20dire%20pas%20visible.&reponse3=E I H N&eof=true

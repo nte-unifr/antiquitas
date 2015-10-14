@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<root>
+  <instructions><b>Consigne :</b><br/><br/>Lisez attentivement l'inscription présente dans la figure ci-contre, puis introduisez dans chaque champ chaque mot séparément en majuscules, tel que vous le voyez, sans chercher à résoudre les abréviations (ne pas indiquer les signes de séparation). Vous disposez de 3 essais.</instructions>
+  <comment_start></comment_start>
+  <comment_word_tiret></comment_word_tiret>
+  <comment_default_true>Votre réponse est correcte</comment_default_true>
+  <comment_default_false>Votre réponse n'est pas correcte. Vous pouvez obtenir la solution en cliquant sur l'image</comment_default_false>
+  <record>
+    <answer>D</answer>
+  </record>
+  <record>
+    <answer>M</answer>
+  </record>
+  <record>
+    <answer>S</answer>
+  </record>
+  <record>
+    <answer>VISELLIAE</answer>
+  </record>
+  <record>
+    <answer>FIRMAE</answer>
+  </record>
+  <record>
+    <answer>VISEL</answer>
+  </record>
+  <record>
+    <answer>FIRMINVS</answer>
+<comment>Attention à la ligature des lettres <i>US</i><br/>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule. </comment>
+  </record>
+  <record>
+    <answer>ET</answer>
+  </record>
+  <record>
+    <answer>IVLIA</answer>
+<comment>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule. </comment>
+  </record>
+  <record>
+    <answer>SECVNDA</answer>
+<comment>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule. </comment>
+  </record>
+  <record>
+    <answer>PARENTE[.]</answer>
+<comment>Attention il y a là une ligature des lettres  <i>NTE</i> et la dernière lettre de la ligne a été abîmée. Inscrivez à sa place [.]</comment>
+  </record>
+  <record>
+    <answer>INFE</answer>
+<comment>Attention à la ligature des lettres <i>FE</i></comment>
+
+
+  </record>
+  <record>
+    <answer>VIX</answer>
+<comment>Attention à la ligature des lettres <i>VIX</i></comment>
+  </record>
+  <record>
+    <answer>AN</answer>
+  </record>
+  <record>
+    <answer>I</answer>
+  </record>
+  <record>
+    <answer>DIEB</answer>
+  </record>
+  <record>
+    <answer>L</answer>
+  </record>
+
+</root>

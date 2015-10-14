@@ -1,0 +1,1 @@
+nbrErreurs=3&reponse1=QEMISQOKLEES&reponse2=NEOKLEOS&reponse3=FRERIOS&eof=true

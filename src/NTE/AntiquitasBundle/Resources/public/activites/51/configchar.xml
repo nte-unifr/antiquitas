@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<root>
+  <instructions><b>Consigne :</b><br/><br/>Lisez attentivement l'inscription présente dans la figure ci-contre, puis introduisez dans chaque champ chaque mot séparément en majuscules, tel que vous le voyez, sans chercher à résoudre les abréviations (ne pas indiquer les signes de séparation: points, triangles, hederae etc.). Vous disposez de 3 essais.</instructions>
+  <comment_start></comment_start>
+  <comment_word_tiret></comment_word_tiret>
+  <comment_default_true>Votre réponse est correcte</comment_default_true>
+  <comment_default_false>Votre réponse n'est pas correcte. Vous pouvez obtenir la solution en cliquant sur l'image</comment_default_false>
+  <record>
+    <answer>C</answer>
+  </record>
+  <record>
+    <answer>VALER</answer>
+  </record>
+  <record>
+    <answer>C</answer>
+  </record>
+  <record>
+    <answer>F</answer>
+  </record>
+  <record>
+    <answer>FAB</answer>
+  </record>
+  <record>
+    <answer>CA</answer>
+<comment>attention à la  <a href="../../outils/index.html#ligature" target="_blank"><u>ligature</u></a></comment>
+  </record>
+  <record>
+    <answer>MILLO</answer>
+  </record>
+  <record>
+    <answer>QVOI</answer>
+<comment_false>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule.</comment_false>
+  </record>
+  <record>
+    <answer>PVBLICE</answer>
+<comment_false>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule.</comment_false>
+  </record>
+  <record>
+    <answer>FVNVS</answer>
+<comment_false>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule.</comment_false>
+  </record>
+  <record>
+    <answer>HAEDVORVM</answer>
+<comment_false>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule.</comment_false>
+  </record>
+  <record>
+    <answer>CIVITAS</answer>
+  </record>
+  <record>
+    <answer>ET</answer>
+  </record>
+  <record>
+    <answer>HELVET</answer>
+  </record>
+  <record>
+    <answer>DECRE</answer>
+  </record>
+  <record>
+    <answer>VERVNT</answer>
+<comment_false>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule.</comment_false>
+  </record>
+  <record>
+    <answer>ET</answer>
+  </record>
+  <record>
+    <answer>CIVITAS</answer>
+  </record>
+  <record>
+    <answer>HELVET</answer>
+  </record>
+  <record>
+    <answer>QVA</answer>
+<comment_false>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule.</comment_false>
+  </record>
+  <record>
+    <answer>PAGATIM</answer>
+  </record>
+  <record>
+    <answer>QVA</answer>
+<comment_false>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule.</comment_false>
+  </record>
+  <record>
+    <answer>PVBLICE</answer>
+<comment_false>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule.</comment_false>
+  </record>
+  <record>
+    <answer>STATVAS</answer>
+<comment_false>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule.</comment_false>
+  </record>
+  <record>
+    <answer>DECREVIT</answer>
+<comment>inscrire [.]</comment>
+  </record>
+  <record>
+    <answer>I[.]LIA</answer>
+  </record>
+  <record>
+    <answer>C</answer>
+  </record>
+  <record>
+    <answer>IVLI</answer>
+<comment_false>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule.</comment_false>
+  </record>
+  <record>
+    <answer>CAMILLI</answer>
+  </record>
+  <record>
+    <answer>F</answer>
+  </record>
+  <record>
+    <answer>FESTILLA</answer>
+  </record>
+  <record>
+    <answer>EX</answer>
+  </record>
+  <record>
+    <answer>TESTAMENTO</answer>
+  </record>
+</root>

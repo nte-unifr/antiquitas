@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<root>
+  <instructions><b>Consigne :</b><br/><br/>Introduisez dans chaque champ chaque mot séparément en majuscules puis, en vous aidant des outils, développez les abréviations en minuscules.<br/>Pour les lettres qui ont disparu dans une lacune de la pierre, notez-les toujours entre [ ] en majuscules.<br/>Quand un mot commence à la fin d'une ligne et se poursuit à la ligne suivante, mentionnez que le mot est coupé en ajoutant un - après les premières lettres.  Vous disposez de 3 essais.</instructions>
+  <comment_start/>
+  <comment_word_tiret/>
+  <comment_default_true>Votre réponse est correcte.</comment_default_true>
+  <comment_default_false>Votre réponse n'est pas correcte. Vous pouvez obtenir la solution en cliquant sur l'image</comment_default_false>
+  <record>
+    <answer>Dis</answer>
+  </record>
+  <record>
+    <answer>Manibus</answer>
+  </record>
+  <record>
+    <answer>Sacrum</answer>
+<comment><b>Notice :</b> Cette formule initiale place la pierre sous la protection des dieux infernaux, les Dieux Mânes (Dis Manibus). L'expression DMS, D(is) M(anibus) s(acrum), est une particularité jusqu'ici inconnue en Suisse.</comment>
+  </record>
+  <record>
+    <answer>VISELLIAE</answer>
+  </record>
+  <record>
+    <answer>FIRMAE</answer>
+  </record>
+  <record>
+    <answer>VISELlius</answer>
+  </record>
+  <record>
+    <answer>FIRMINVS</answer>
+<comment>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule. </comment>
+  </record>
+  <record>
+    <answer>ET</answer>
+  </record>
+  <record>
+    <answer>IVLIA</answer>
+<comment>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule. </comment>
+  </record>
+  <record>
+    <answer>SECVNDA</answer>
+<comment>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule. </comment>
+  </record>
+  <record>
+    <answer>PARENTE[S]</answer>
+<comment><b>Notice :</b> Notice : Attention: la lacune peut être ici restituée par un "S" entre crochets [].</comment>
+  </record>
+  <record>
+    <answer>INFElicissimi</answer>
+  </record>
+  <record>
+    <answer>VIXit</answer>
+  </record>
+  <record>
+    <answer>ANno</answer>
+  </record>
+  <record>
+    <answer>I</answer>
+  </record>
+  <record>
+    <answer>DIEBus</answer>
+  </record>
+  <record>
+    <answer>L</answer>
+  </record>
+</root>

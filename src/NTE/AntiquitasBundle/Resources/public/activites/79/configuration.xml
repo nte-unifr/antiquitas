@@ -1,0 +1,10 @@
+<antiquitas>
+  <!-- Titre et fichier qui s'affiche SOUS toutes les étapes sauf la consigne -->
+  <activity srcswf="" x="" y=""><br/>Einführung in die Alte Geschichte</activity>
+  <!-- La consigne qui s'affiche à la première page  -->
+  <consigne srcswf="acceuil_jump.swf" x="" y="" depth="top">Offene Fragen</consigne>
+
+  <folder label="Offene Fragen" srcswf="" x="" y="">
+    <pagefile x="" y="">bilan1.swf</pagefile>
+  </folder>
+</antiquitas>

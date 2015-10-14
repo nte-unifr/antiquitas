@@ -1,0 +1,34 @@
+<antiquitas>
+  <toolMenu srcswf="../outil_MenuNav_M9M10FR.swf"/>
+  <!-- Titre et fichier qui s'affiche SOUS toutes les étapes sauf la consigne -->
+  <activity srcswf="" x="" y="">Les lieux et le personnel de culte</activity>
+  <!-- La consigne qui s'affiche à la première page  -->
+  <consigne srcswf="accueil.swf" x="" y="">
+<i><b>PRÊTRISES ROMAINES et
+PRÊTRISES grecques</b><br /><br /></i>
+
+
+<b>Consigne</b>
+
+Déterminez les caractéristiques principales des sacerdoces romains et grecs par la lecture de quelques textes antiques
+
+Cliquez sur l'une des "Prêtrises" pour commencer
+ </consigne>
+  <folder label="Prêtrises romaines 1" srcswf="Texte-1.swf" x="" y="">
+    <pagefile x="" y="">1-1.swf</pagefile>
+    <pagefile x="" y="">1-2.swf</pagefile>
+    <pagefile x="" y="">1-3.swf</pagefile>
+  </folder>
+  <folder label="Prêtrises romaines 2" srcswf="Texte-1.swf" x="" y="">
+    <pagefile x="" y="">2-1.swf</pagefile>
+    <pagefile x="" y="">2-2.swf</pagefile>
+    <pagefile x="" y="">2-3.swf</pagefile>
+  </folder>
+  <folder label="Prêtrises grecques" srcswf="Texte-2.swf" x="" y="">
+    <pagefile x="" y="">3-1.swf</pagefile>
+  </folder>
+  <folder label="Bilan">
+    <!-- Une page bilan peut être déclarée avec le MovieClip à imprimer dans le fichier bilan.swf-->
+    <pagefile typeBilan="true" typePrint="true" mcToPrint="printMe">bilan.swf</pagefile>
+  </folder>
+</antiquitas>

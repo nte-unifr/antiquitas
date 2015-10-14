@@ -1,0 +1,17 @@
+<antiquitas>
+  <toolMenu srcswf="../outil_MenuNav_M17_FR.swf"/>
+  <!-- Titre et fichier qui s'affiche SOUS toutes les étapes sauf la consigne -->
+  <activity srcswf="" x="" y="">Roman Imperial Coinage (RIC)</activity>
+  <!-- La consigne qui s'affiche à la première page  -->
+  <consigne srcswf="../accueil_Dyn_imgSmall_txtNarrow.swf" x="" y=""><b>Présentation de l'exercice</b><br/><br/>Avec cette activité, vous vous familiarisez avec un catalogue de types relatif aux monnaies de l’Empire romain (30 av. J.-C. – 476). Après une introduction sur la composition des volumes et la présentation d’une page typique du catalogue, vous simulerez l’emploi pratique de cet ouvrage de référence.</consigne>
+  <folder label="Introduction" srcswf="" x="" y="" depth="top">
+    <pagefile x="" y="">intro.swf</pagefile>
+  </folder>
+   <folder label="Exemple" srcswf="coin1.swf" x="" y="" depth="top">
+    <pagefile x="" y="">beispiel.swf</pagefile>
+  </folder>
+ <folder label="Exercice" srcswf="coin2.swf" x="" y="">
+    <pagefile x="" y="">uebung.swf</pagefile>
+  </folder>
+
+</antiquitas>

@@ -1,0 +1,199 @@
+body {
+	font-size: 13px;
+}
+
+div#content {
+	width: 798px;
+	margin: 0 auto;
+}
+
+div.exercice_outer {
+	border: 1px outset #006699;
+	background-color: #006699;
+	padding: 5px;
+	text-align: right;
+}
+div.exercice_inner {
+	border: 1px inset #006699;
+	background-color: #fff;
+	padding: 6px;
+	text-align: left;
+	margin-bottom: 5px;
+}
+
+div#exercicemenu {
+	background-color: #006699;
+	padding-top: 2px;
+	text-align: left;
+}
+div#exercicemenu a {
+	color: #fff;
+	padding: 2px 3px;
+	text-decoration: none;
+}
+div#exercicemenu a:hover, div#exercicemenu a.active  {
+	text-decoration: underline;
+}
+
+div#sectionmenu a {
+	margin-left: 12px;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+	background-color: transparent;
+	border-left: 1px solid #006699;
+	border-top: 1px solid #006699;
+	padding: 4px;
+	padding-left: 3px;
+	color: #000;
+}
+div#sectionmenu a:hover, div#sectionmenu a.active {
+	border: none;
+	border-top: 1px outset #006699;
+	background-color: #006699;
+	color: #fff;
+	padding: 4px;
+}
+/*
+#exobj {
+	padding: 1px;
+	border: 1px solid #006699;
+}
+*/
+p#submitbtns {
+	margin: 10px 0;
+	text-align: right;
+}
+
+
+.answer {
+	color: Green;
+}
+
+div.posttext {
+	margin-top: 25px;
+	border-top: 2px dashed Green;
+	color: Green;
+}
+
+textarea {
+	width: 350px;
+	height: 150px;
+}
+
+a#homelink, a#langlink, a#printlink {
+	float: right;
+	margin: 0 3px;
+	cursor: pointer;
+}
+
+#actlist, #actlist ul {
+	list-style: none;
+	font-size: 13px;
+}
+
+a#helplink {
+	float: right;
+}
+
+#useridp {
+	margin-top: 2px;
+	font-size: 12px;
+	color: #808080;
+}
+#useridp span {
+	color: #000;
+}
+
+#actlist a.actdone, #actlist a.actdone:visited {
+	color: DarkGreen;
+}
+
+#outilsmenu {
+	float: right;
+}
+#outils_rolldown {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: none;
+	position: absolute;
+	z-index: 150;
+	border: 1px solid #006699;
+	border-top: none;
+}
+#outils_rolldown li {
+	margin: 0;
+	padding: 0;
+	background-color: #fff;
+}
+#outils_rolldown a {
+	display: block;
+	padding: 3px 4px;
+	color: #000;
+	text-decoration: none;
+	border-top: 1px solid #006699;
+}
+#outils_rolldown li a:hover {
+	background-color: #006699;
+	color: #fff;
+}
+
+.marker {
+	font-weight: bold;
+	color: red;
+}
+
+#welcometable {
+	width: 100%;
+	text-align: center;
+}
+#welcometable td {
+	width: 50%;
+	height: 200px;
+	vertical-align: middle;
+}
+#welcometable a, #welcometable a:visited {
+	display: block;
+	color: #000;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 15px 35px;
+	cursor: pointer;
+}
+
+input.bluebtn {
+	border: 2px outset #006699;
+	background-color: #AFD3FF;
+	padding-bottom: 1px;
+	padding-top: 0;
+	font-weight: bold;
+}
+input.bluebtn:active {
+	border: 2px inset #006699;
+	padding-bottom: 0;
+	padding-top: 1px;
+}
+
+#ex_result {
+	font-weight: bold;
+	font-style: italic;
+	text-align: right;
+}
+
+li.category {
+	font-weight: bold;
+	padding-top: 18px;
+}
+li.category li {
+	font-weight: normal;
+}
+
+#session_form {
+	width: 285px;
+	font-weight: 90%;
+	margin: 30px auto 0;
+	text-align: center;
+}
+

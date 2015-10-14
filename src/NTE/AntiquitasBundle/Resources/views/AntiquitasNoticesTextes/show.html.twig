@@ -1,0 +1,14 @@
+{% extends 'NTEAntiquitasBundle::layout.html.twig' %}
+
+{% block body -%}
+    <a href="{{ path('modules') }}">>{{ 'Modules' | trans }}</a> > 
+    <a href="{{ path('modules_show', {'id': entity.idFiche.idChapitre.idModule.id}) }}">{{ entity.idFiche.idChapitre.idModule|raw }}</a> > 
+    <a href="{{ path('modules_show', {'id': entity.idFiche.idChapitre.idModule.id}) }}">{{ entity.idFiche.idChapitre|raw }}</a> > 
+    <a href="{{ path('fiches_show', {'id': entity.idFiche.id}) }}">{{ entity.idFiche|raw }}</a>
+
+    <h1>{{ entity.nom|raw }}</h1>
+
+    <div class="row-fluid">
+        {{ entity.contenu|replace({'src="images/': 'src="' ~ asset('bundles/nteantiquitas/images/') })|raw }}
+    </div>
+{% endblock %}

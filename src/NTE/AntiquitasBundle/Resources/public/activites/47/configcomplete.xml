@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<root>
+  <instructions><b>Consigne :</b><br/><br/>Introduisez dans chaque champ chaque mot séparément en majuscules puis, en vous aidant des outils, développez les abréviations en minuscules.<br/>Pour les lettres qui ont disparu dans une lacune de la pierre, notez-les toujours entre [ ] en majuscules.<br/>Quand un mot commence à la fin d'une ligne et se poursuit à la ligne suivante, mentionnez que le mot est coupé en ajoutant un - après les premières lettres.  Vous disposez de 3 essais.</instructions>
+  <comment_start/>
+  <comment_word_tiret/>
+  <comment_default_true>Votre réponse est correcte.</comment_default_true>
+  <comment_default_false>Votre réponse n'est pas correcte. Vous pouvez obtenir la solution en cliquant sur l'image</comment_default_false>
+  <record>
+    <answer>DEAE</answer>
+  </record>
+  <record>
+    <answer>AVENTiae</answer>
+  </record>
+  <record>
+    <answer>Titus</answer>
+  </record>
+  <record>
+    <answer>TERTIUS</answer>
+  </record>
+  <record>
+    <answer>SEVERUS</answer>
+  </record>
+  <record>
+    <answer>CVRator</answer>
+<comment_false>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule.</comment_false>
+  </record>
+  <record>
+    <answer>COLONiae</answer>
+  </record>
+  <record>
+    <answer>IDEMQUE</answer>
+  </record>
+  <record>
+    <answer>ALLectus</answer>
+  </record>
+  <record>
+    <answer>CVI</answer>
+<comment_false>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule.</comment_false>
+  </record>
+  <record>
+    <answer>INCOLAE</answer>
+  </record>
+  <record>
+    <answer>AVENTICENSes</answer>
+  </record>
+  <record>
+    <answer>PRIMo</answer>
+  </record>
+  <record>
+    <answer>OMNIVM</answer><comment_false>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule.</comment_false>
+  </record>
+  <record>
+    <answer>OB</answer>
+  </record>
+  <record>
+    <answer>EIVS</answer>
+<comment_false>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule.</comment_false>
+  </record>
+  <record>
+    <answer>ERGA</answer>
+  </record>
+  <record>
+    <answer>SE</answer>
+  </record>
+  <record>
+    <answer>MERITA</answer>
+  </record>
+  <record>
+    <answer>T[A]BVLAM</answer>
+<comment_false>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule.</comment_false>
+  </record>
+  <record>
+    <answer>ARGenteam</answer>
+  </record>
+  <record>
+    <answer>Pondo</answer>
+  </record>
+  <record>
+    <answer>[.]L</answer>
+<comment_false><b>Notice : </b>Il s’agit d’un chiffre que l’on ne peut pas restituer avec certitude. Laissez [.] à la place de la lettre illisible.</comment_false>
+  </record>
+  <record>
+    <answer>POSVERunt</answer>
+<comment_false>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule.</comment_false>
+  </record>
+  <record>
+    <answer>DONVM</answer>
+<comment_false>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule.</comment_false>
+  </record>
+  <record>
+    <answer>De</answer>
+  </record>
+  <record>
+    <answer>Sua</answer>
+  </record>
+  <record>
+    <answer>Pecunia</answer>
+  </record>
+  <record>
+    <answer>EX</answer>
+  </record>
+  <record>
+    <answer>Sestertii</answer>
+  </record>
+  <record>
+    <answer>VCC</answer>
+  </record>
+  <record>
+    <answer>Locus</answer>
+  </record>
+  <record>
+    <answer>Datus</answer>
+  </record>
+  <record>
+    <answer>[Decreto]</answer>
+  </record>
+  <record>
+    <answer>[Decurionum]</answer>
+  </record>
+</root>

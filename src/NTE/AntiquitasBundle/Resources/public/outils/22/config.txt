@@ -1,0 +1,1 @@
+glossXMLUrl=technika.xml&glossImageUrl=images/&

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<root>
+  <instructions><b>Consigne :</b><br/><br/>Lisez attentivement l'inscription présente dans la figure ci-contre, puis introduisez dans chaque champ chaque mot séparément en majuscules, tel que vous le voyez, sans chercher à résoudre les abréviations (ne pas indiquer les signes de séparation). Vous disposez de 3 essais.</instructions>
+  <comment_start></comment_start>
+  <comment_word_tiret></comment_word_tiret>
+  <comment_default_true>Votre réponse est correcte</comment_default_true>
+  <comment_default_false>Votre réponse n'est pas correcte. Vous pouvez obtenir la solution en cliquant sur l'image</comment_default_false>
+  <record>
+    <answer>MART</answer>
+  </record>
+  <record>
+    <answer>CAISIV</answer>
+  </record>
+  <record>
+    <answer>POMP</answer>
+  </record>
+  <record>
+    <answer>OPTATVS</answer>
+<comment_false>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule.</comment_false>
+  </record>
+  <record>
+    <answer>FL</answer>
+<comment_false>La lecture de la ligne 3 a été faussée jusqu'à aujourd'hui par des traces de couleur rouge ajoutées après la découverte de la plaquette. Par conséquent, tous les auteurs ont lu <i>P I</i> en début de ligne et ont complété, à contre-cœur, <i>p(ro) i(ncolumitate) Augusti</i>, ce qui faisait de cette ligne une abréviation unique dans l'épigraphie latine, alors que la formule non-abrégée <i>pro incolumitate Augusti</i>, "pour le salut de l'empereur", est fréquente dans les inscriptions votives.</comment_false>
+  </record>
+  <record>
+    <answer>AUG</answer>
+  </record>
+  <record>
+    <answer>EX</answer>
+<comment_false>Le graveur a inscrit FX STIPE au lieu de EX STIPE</comment_false>
+  </record>
+  <record>
+    <answer>STIP</answer>
+  </record>
+</root>

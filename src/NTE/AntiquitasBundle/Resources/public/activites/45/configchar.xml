@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<root>
+  <instructions><b>Consigne :</b><br/><br/>Lisez attentivement l'inscription présente dans la figure ci-contre, puis introduisez dans chaque champ chaque mot séparément en majuscules, tel que vous le voyez, sans chercher à résoudre les abréviations (ne pas indiquer les signes de séparation). Vous disposez de 3 essais.</instructions>
+  <comment_start></comment_start>
+  <comment_word_tiret></comment_word_tiret>
+  <comment_default_true>Votre réponse est correcte</comment_default_true>
+  <comment_default_false>Votre réponse n'est pas correcte. Vous pouvez obtenir la solution en cliquant sur l'image</comment_default_false>
+  <record>
+    <answer>[D]</answer>
+<comment> Allez observer sur d'autres pierres quelle lettre on trouve fréquemment associée au M en tête d'inscription. Inscrivez-la entre [ ] puisqu'elle manque.
+</comment>
+  </record>
+  <record>
+    <answer>M</answer>
+  </record>
+  <record>
+    <answer>POMP</answer>
+  </record>
+  <record>
+    <answer>GE[M]ELL</answer>
+<comment>pour restituer le mot manquant, choisissez parmi les suggestions suivantes: GELONI, GEBENN, GEMELL, GENETR et GENIALES. Inscrivez entre [ ] les lettres disparues.</comment>
+  </record>
+  <record>
+    <answer>POMP</answer>
+  </record>
+  <record>
+    <answer>DI[CA]EA</answer>
+<comment>ce mot se poursuit jusqu'à l'avant-dernière lettre de la ligne. Quelle forme proposez-vous? DISPUTATIONES, DISSEPIMENTA, DICAS, DICAEA ou DIURNA. Indiquez entre [ ] les lettres absentes.</comment>
+  </record>
+  <record>
+    <answer>L</answer>
+<comment>seule une lettre est ý identifier!</comment>
+  </record>
+  <record>
+    <answer>ET</answer>
+  </record>
+  <record>
+    <answer>PRIMV[L]IA</answer>
+<comment>ce mot s'étend jusqu'à l'avant-dernière lettre de la ligne. Quelle restitution est-elle correcte, PRIMITI, PRIMOGENITI, PRIMIGENIA, PRIMICERIA ou PRIMULIA? N'oubliez pas d'indiquer entre [ ] les lettres manquantes.<br/>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule. </comment>
+  </record>
+  <record>
+    <answer>S</answer>
+  </record>
+  <record>
+    <answer>EDVCAT</answer>
+<comment> la dernière lettre du mot se trouve sur la cassure de la pierre.<br/>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule. </comment>
+  </record>
+  <record>
+    <answer>[A]VG</answer>
+<comment>la liste des abréviations peut vous aider à choisir le bon mot. Est-ce AVG, AG, AB.AEG ou AAGG? La lettre suivante est certainement un indice dans votre choix.<br/>La distinction entre le "U" et le "V" apparaît aux XIIe et XIIIe s. Jusque là, le son "u" se notait "u" en minuscule et "V" en majuscule. </comment>
+  </record>
+  <record>
+    <answer>N</answer>
+<comment>il ne manque ici qu'une seule lettre.</comment>
+  </record>
+</root>

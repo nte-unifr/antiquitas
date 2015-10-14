@@ -1,0 +1,28 @@
+<antiquitas>
+  <toolMenu srcswf="../outil_MenuNav_M9M10FR.swf"/>
+  <!-- Titre et fichier qui s'affiche SOUS toutes les étapes sauf la consigne -->
+  <activity srcswf="" x="" y="">La figure d'Aphrodite</activity>
+  <!-- La consigne qui s'affiche à la première page  -->
+  <consigne srcswf="../accueil_Dyn_short_Title.swf" x="" y="">
+
+<b>Consigne</b>Plusieurs textes poétiques et documents relatifs aux cultes évoquent la déesse Aphrodite et son homologue romain Vénus. Après avoir pris connaissance de chacun d’entre eux, cochez la ou les interprétations qui vous semblent y correspondre parmi les possibilités qui vous sont offertes.Confrontez ensuite l’ensemble des réponses et commentez le résultat.Cliquez sur une des sources à choix pour commencer.  </consigne>
+  <folder label="Textes poétiques" srcswf="" x="" y="">
+    <pagefile x="" y="">a1.swf</pagefile>
+    <pagefile x="" y="">a2.swf</pagefile>
+    <pagefile x="" y="">a3.swf</pagefile>
+    <pagefile x="" y="">a4.swf</pagefile>
+    <pagefile x="" y="">a5.swf</pagefile>
+  </folder>
+  <folder label="Témoignages cultuels">
+    <pagefile x="" y="">b1.swf</pagefile>
+    <pagefile x="" y="">b2.swf</pagefile>
+    <pagefile x="" y="">b3.swf</pagefile>
+  </folder>
+  <folder label="Iconographie">
+    <pagefile x="" y="">c1.swf</pagefile>
+  </folder>
+  <folder label="Bilan">
+    <!-- Une page bilan peut être déclarée avec le MovieClip à imprimer dans le fichier bilan.swf-->
+    <pagefile typeBilan="true" typePrint="true" mcToPrint="printMe">bilan.swf</pagefile>
+  </folder>
+</antiquitas>

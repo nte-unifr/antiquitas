@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<record>
+  <texte>Littre, <i>Dictionnaire de la langue francaise</i>, tome IV (1880), p. 5386-5387  <b>RELIGION</b> : 1. Ensemble de «doctrines» et de «pratiques» qui constitue le rapport de l'homme avec la puissance divine (...). 3. «Foi», croyance , «piété» (...). 4. Sentiment de «respect», de «scrupule» (...). 5. L'état des personnes engagées par des voeux à une certaine «règle autorisée par l'Eglise».</texte>
+  <listeA>
+    <w>doctrines</w>
+    <w>Foi</w>
+    <w>règle autorisée par l'Eglise</w>
+  </listeA>
+  <listeB>
+    <w>pratiques</w>
+    <w>piété</w>
+    <w>respect</w>
+    <w>scrupule</w>
+  </listeB>
+</record>

@@ -1,0 +1,59 @@
+img {
+	border: 0;
+}
+
+a img {
+	vertical-align: middle;
+}
+legend {
+	font-weight: bold;
+}
+
+
+#coinManip_div {
+	text-align: left;
+	height: 300px;
+}
+#coinManip_buttons {
+	float: left;
+	width: 20px;
+	padding-right: 5px;
+}
+#coinManip_buttons img {
+	padding: 2px;
+}
+#coinManip_buttons img.active, #coinManip_buttons img:hover {
+	background-color: #AFD3FF;
+}
+#coinManip_spacer {
+	height: 1px;
+	width: 300px;
+}
+
+
+
+/* DEBUG CONSOLE */
+
+#debuglog {
+	clear: both;
+	width: auto;
+	background-color: #fff;
+}
+#debuglog a {
+	display: block;
+	padding: 5px;
+}
+#debuglog a:hover {
+	background-color: #C0C0C0;
+}
+#debuglog a.debug_green {
+	color: Green;
+}
+#debuglog a.debug_red {
+	color: Red;
+	font-weight: bold;
+}
+#debuglog a span {
+	float: right;
+	padding-left: 15px;
+}

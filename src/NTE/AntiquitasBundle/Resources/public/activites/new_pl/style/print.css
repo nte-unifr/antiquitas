@@ -1,0 +1,13 @@
+* {
+	border: 0 !important; 
+}
+
+span.btn {
+	display: none;
+}
+#homelink, #langlink, #acthead, #sectionmenu, #below, #exercicemenu, #debuglog {
+	display: none;
+}
+#exercice_outer {
+	padding: 0;
+}

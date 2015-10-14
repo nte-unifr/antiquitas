@@ -1,0 +1,14 @@
+{% extends 'NTEAntiquitasBundle::layout.html.twig' %}
+
+{% block body -%}
+    <a href="{{ path('modules') }}">Modules</a> > 
+    <a href="{{ path('modules_show', {'id': entity.idFiche.idChapitre.idModule.id}) }}">{{ entity.idFiche.idChapitre.idModule }}</a> > 
+    <a href="{{ path('modules_show', {'id': entity.idFiche.idChapitre.idModule.id}) }}">{{ entity.idFiche.idChapitre }}</a> > 
+    <a href="{{ path('fiches_show', {'id': entity.idFiche.id}) }}">{{ entity.idFiche }}</a>
+
+    <h1>Bibliographie de la fiche {{ entity.idFiche|raw }}</h1>
+
+    <div class="row-fluid">
+        {{ entity.contenu|raw }}
+    </div>
+{% endblock %}

@@ -1,0 +1,27 @@
+.exercice_inner table {
+	border: 0;
+	width: 99%;
+}
+
+td {
+	vertical-align: top;
+}
+
+td.tpl_object {
+	text-align: center;
+}
+
+
+.shortinputs input {
+	width: 80px;
+}
+
+.tpl_presentation_obj {
+	float: left;
+	margin-right: 20px;
+}
+
+.oneprompt {
+	font-weight: bold;
+}
+

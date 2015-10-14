@@ -1,0 +1,21 @@
+<antiquitas>
+  <toolMenu srcswf="../outil_MenuNav_M17_FR.swf"/>
+  <!-- Titre et fichier qui s'affiche SOUS toutes les étapes sauf la consigne -->
+  <activity srcswf="" x="" y="">Les combinaisons des coins</activity>
+  <!-- La consigne qui s'affiche à la première page  -->
+  <consigne srcswf="accueil_Dyn.swf" x="" y=""><b>Présentation de l’activité</b><br/><br/>Exercice pratique sur les liaisons de coins avec les émissions monétaires de l’empereur Claude <br />(d’après H.-M. von Kaenel, <i>Münzprägung und Münzbildnis des Kaisers Claudius</i>, Berlin, 1986).</consigne>
+  <folder label="Introduction">
+    <pagefile x="" y="">1-1.swf</pagefile>
+  </folder>
+  <folder label="Comparaison de coins">
+    <pagefile x="" y="">2-1.swf</pagefile>
+	<pagefile x="" y="">2-2.swf</pagefile>
+  </folder>
+  <folder label="Exercice">
+    <pagefile x="" y="">3-1.swf</pagefile>
+  </folder>
+  <folder label="Commentaire">
+    <pagefile x="" y="">bilan.swf</pagefile>   
+  </folder>
+
+</antiquitas>

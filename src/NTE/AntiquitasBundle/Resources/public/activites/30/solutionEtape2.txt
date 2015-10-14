@@ -1,0 +1,1 @@
+nbrErreurs=3&reponse1=DELFOI EDWKAN&reponse2=CIOIS PROMANT-&notice2=Attention!%20Le%20deuxi%E8me%20jambage%20du%20%22pi%22%20n'est pour%20ainsi%20dire%20pas%20visible.&reponse3=EIHN&eof=true

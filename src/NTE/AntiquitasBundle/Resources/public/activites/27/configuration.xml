@@ -1,0 +1,27 @@
+<antiquitas>
+  <toolMenu srcswf="../outil_MenuNav_M18_FR.swf"/>
+  <!-- Titre et fichier qui s'affiche SOUS toutes les étapes sauf la consigne -->
+  <activity srcswf="" x="" y="">Datation, interprétation et commentaire: Athènes, ostrakon</activity>
+  <!-- La consigne qui s'affiche à la première page  -->
+  <consigne srcswf="accueil.swf" x="" y="" depth="top">Provient d’un dépôt de poteries découvert lors des fouilles du sud-est de l’agora avec une centaine d’autres ostraka (H 12 sur le plan) 
+Athènes, musée de l’agora, inv. P 9950
+IG I² 910 ; <i>The Athenian Agora</i> 25, 1990, n. 946</consigne>
+  <folder label="Présentation" srcswf="" x="" y="" depth="">
+    <pagefile x="" y="">e1_fiche.swf</pagefile>
+  </folder>
+  <folder label="Interprétation" srcswf="traduction.swf" x="" y="" depth="top">
+    <pagefile x="" y="">q11_CC.swf</pagefile>
+    <pagefile x="" y="">q12_CC.swf</pagefile>
+    <pagefile x="" y="">q13_CC.swf</pagefile>
+    <pagefile x="" y="">q14_CC.swf</pagefile>
+  </folder>
+  <folder label="Datation" srcswf="traduction.swf" x="" y="" depth="">
+    <pagefile x="" y="">q21_CC.swf</pagefile>
+    <pagefile x="" y="">q22_CC.swf</pagefile>
+    <pagefile x="" y="">q23_CC.swf</pagefile>
+    <pagefile x="" y="">q24_CC.swf</pagefile>
+  </folder>
+  <folder label="Commentaire" srcswf="" x="" y="">
+    <pagefile x="" y="">bilan1.swf</pagefile>
+  </folder>
+</antiquitas>

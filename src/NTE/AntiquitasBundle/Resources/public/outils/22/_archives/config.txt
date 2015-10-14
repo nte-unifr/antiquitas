@@ -1,0 +1,1 @@
+glossXMLUrl=glossary.xml&glossImageUrl=images/&
