@@ -9,7 +9,7 @@
             <a href="javascript:OpenToolsWindow('{{ path('outils_show', {'id': entity.id, 'type': 'ressource'}) }}');" role="button" class="btn">{{ 'Ressources' | trans }}</a>
             <hr />
         </div>
-        
+
         {#<!-- Modals -->
         <div id="modal-lexika" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-header">
@@ -18,11 +18,11 @@
             </div>
             <div class="modal-body">
                 {% for outil in entity.outils %}
-                    {% if 'lexika' == outil.idOutil.idType %}<ul><li>
-                        {% if 'href' in outil.idOutil.nom %}
-                            {{ outil.idOutil.nom|raw }}
+                    {% if 'lexika' == outil.idType %}<ul><li>
+                        {% if 'href' in outil.nom %}
+                            {{ outil.nom|raw }}
                         {% else %}
-                            <a href="javascript:OpenToolsWindow('{{ asset('bundles/nteantiquitas/outils') }}/{{ outil.idOutil.id }}/index.html');">{{ outil.idOutil.nom|raw }}</a>
+                            <a href="javascript:OpenToolsWindow('{{ asset('bundles/nteantiquitas/outils') }}/{{ outil.id }}/index.html');">{{ outil.nom|raw }}</a>
                         {% endif %}</li></ul>
                     {% endif %}
                 {% endfor %}
@@ -38,11 +38,11 @@
             </div>
             <div class="modal-body">
                 {% for outil in entity.outils %}
-                    {% if 'atlas' == outil.idOutil.idType %}<ul><li>
-                        {% if 'href' in outil.idOutil.nom %}
-                            {{ outil.idOutil.nom|raw }}
+                    {% if 'atlas' == outil.idType %}<ul><li>
+                        {% if 'href' in outil.nom %}
+                            {{ outil.nom|raw }}
                         {% else %}
-                            <a href="javascript:OpenToolsWindow('{{ asset('bundles/nteantiquitas/outils') }}/{{ outil.idOutil.id }}/index.html');">{{ outil.idOutil.nom|raw }}</a>
+                            <a href="javascript:OpenToolsWindow('{{ asset('bundles/nteantiquitas/outils') }}/{{ outil.id }}/index.html');">{{ outil.nom|raw }}</a>
                         {% endif %}</li></ul>
                     {% endif %}
                 {% endfor %}
@@ -58,11 +58,11 @@
             </div>
             <div class="modal-body">
                 {% for outil in entity.outils %}
-                    {% if 'chronologie' == outil.idOutil.idType %}<ul><li>
-                        {% if 'href' in outil.idOutil.nom %}
-                            {{ outil.idOutil.nom|raw }}
+                    {% if 'chronologie' == outil.idType %}<ul><li>
+                        {% if 'href' in outil.nom %}
+                            {{ outil.nom|raw }}
                         {% else %}
-                            <a href="javascript:OpenToolsWindow('{{ asset('bundles/nteantiquitas/outils') }}/{{ outil.idOutil.id }}/index.html');">{{ outil.idOutil.nom|raw }}</a>
+                            <a href="javascript:OpenToolsWindow('{{ asset('bundles/nteantiquitas/outils') }}/{{ outil.id }}/index.html');">{{ outil.nom|raw }}</a>
                         {% endif %}</li></ul>
                     {% endif %}
                 {% endfor %}
@@ -78,11 +78,11 @@
             </div>
             <div class="modal-body">
                 {% for outil in entity.outils %}
-                    {% if 'ressource' == outil.idOutil.idType %}<ul><li>
-                        {% if 'href' in outil.idOutil.nom %}
-                            {{ outil.idOutil.nom|raw }}
+                    {% if 'ressource' == outil.idType %}<ul><li>
+                        {% if 'href' in outil.nom %}
+                            {{ outil.nom|raw }}
                         {% else %}
-                            <a href="javascript:OpenToolsWindow('{{ asset('bundles/nteantiquitas/outils') }}/{{ outil.idOutil.id }}/index.html');">{{ outil.idOutil.nom|raw }}</a>
+                            <a href="javascript:OpenToolsWindow('{{ asset('bundles/nteantiquitas/outils') }}/{{ outil.id }}/index.html');">{{ outil.nom|raw }}</a>
                         {% endif %}</li></ul>
                     {% endif %}
                 {% endfor %}
@@ -98,9 +98,9 @@
 
     <div class="row-fluid">
         <br /><strong>
-    {{ entity.auteurs|length > 1 ? 'Auteurs'|trans : 'Auteur'|trans }}: 
-    {% for auteur in entity.auteurs %}
-        {{ auteur }}{% if loop.index == entity.auteurs|length - 1 %} et {%- elseif loop.index < entity.auteurs|length -%},{%- endif -%}
+    {{ entity.idAuteur|length > 1 ? 'Auteurs'|trans : 'Auteur'|trans }}: 
+    {% for auteur in entity.idAuteur %}
+        {{ auteur }}{% if loop.index == entity.idAuteur|length - 1 %} et {%- elseif loop.index < entity.idAuteur|length -%},{%- endif -%}
     {% endfor %}
         </strong>
     </div>
@@ -160,7 +160,7 @@
             {% for fiche in chapitre.fiches %}
                 <h4>{{ chapitre.position }}.{{ fiche.position }} <a href="{{ path('fiches_show', { 'id': fiche.id }) }}">{{ fiche|raw }}</a></h4>
                 <ul>
-                
+
                 </ul>
             {% endfor %}
             </div>
@@ -172,11 +172,11 @@
                 {% else %}
                 <h4>{% thumbnail activite.media, 'thumb' with {'style' : 'float: left; width: 60px;'} %} &nbsp;<a href="javascript:OpenToolsWindow('{{ path('activites_show', {'id': activite.id}) }}');">{{ activite.nom|raw }}</a></h4>
                 {% endif %}
-                
+
                 <!-- Modal -->
                 <div style="clear:both;"></div>
                 <ul>
-                
+
                 </ul>
             {% endfor %}
                 <div id="modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -197,7 +197,7 @@
 
     {% if (noticestextes_type4|length + noticestextes_type5|length + noticesliens|length + noticesimages|length + noticesnotes|length != 0) or (entity.bibliographie != '') %}
     <h2>{{ 'Ressources liées à ce module' | trans }}</h2>
-    
+
         <div class="row-fluid">
             <div class="span2">
             </div>

@@ -17,21 +17,21 @@
                 <ul>
                 {% for module in theme.modules %}
                     {% if module.id == 20 %}
-                        <li><a href="javascript:OpenToolsWindow('{{ asset('bundles/nteantiquitas/outils') }}/12/index.html');">{{ module|raw }}</a> 
+                        <li><a href="javascript:OpenToolsWindow('{{ asset('bundles/nteantiquitas/outils') }}/12/index.html');">{{ module|raw }}</a>
                         {% if module.langage != '' %}
-                            <img src="{{ asset('bundles/nteantiquitas/img/' ~ module.langage) }}.jpg" alt="{{ module.langage }}" /> &nbsp; 
+                            <img src="{{ asset('bundles/nteantiquitas/img/' ~ module.langage) }}.jpg" alt="{{ module.langage }}" /> &nbsp;
                         {% endif %}
-                        {% for auteur in module.auteurs %}
-                            {{ auteur }}{% if loop.index == module.auteurs|length - 1 %} {{ 'et' | trans }} {%- elseif loop.index < module.auteurs|length -%},{%- endif -%}
+                        {% for auteur in module.idAuteur %}
+                            {{ auteur }}{% if loop.index == module.idAuteur|length - 1 %} {{ 'et' | trans }} {%- elseif loop.index < module.idAuteur|length -%},{%- endif -%}
                         {% endfor %}
                         </li>
                     {% else %}
-                        <li><a href="{{ path('modules_show', { 'id': module.id }) }}">{{ module|raw }}</a> 
+                        <li><a href="{{ path('modules_show', { 'id': module.id }) }}">{{ module|raw }}</a>
                         {% if module.langage != '' %}
-                            <img src="{{ asset('bundles/nteantiquitas/img/' ~ module.langage) }}.jpg" alt="{{ module.langage }}" /> &nbsp; 
+                            <img src="{{ asset('bundles/nteantiquitas/img/' ~ module.langage) }}.jpg" alt="{{ module.langage }}" /> &nbsp;
                         {% endif %}
-                        {% for auteur in module.auteurs %}
-                            {{ auteur }}{% if loop.index == module.auteurs|length - 1 %} {{ 'et' | trans }} {%- elseif loop.index < module.auteurs|length -%},{%- endif -%}
+                        {% for auteur in module.idAuteur %}
+                            {{ auteur }}{% if loop.index == module.idAuteur|length - 1 %} {{ 'et' | trans }} {%- elseif loop.index < module.idAuteur|length -%},{%- endif -%}
                         {% endfor %}
                         </li>
                     {% endif %}

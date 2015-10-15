@@ -100,7 +100,7 @@ class AntiquitasModules
      *     inverseJoinColumns={@ORM\JoinColumn(name="id_outil", referencedColumnName="id")}
      * )
      */
-    private $outils;
+    private $idOutil;
 
     /**
      * @var \Doctrine\Common\Collections\Collection
@@ -111,7 +111,7 @@ class AntiquitasModules
 
     /**
      *
-     * @ORM\ManyToMany(targetEntity="AntiquitasAuteurs", inversedBy="modules")
+     * @ORM\ManyToMany(targetEntity="AntiquitasAuteurs", inversedBy="idModule")
      * @ORM\JoinTable(name="antiquitas_auteurs_modules",
      *   joinColumns={
      *     @ORM\JoinColumn(name="id_module", referencedColumnName="id")
@@ -121,7 +121,7 @@ class AntiquitasModules
      *   }
      * )
     */
-    protected $auteurs;
+    protected $idAuteur;
 
     /**
      * @var \Doctrine\Common\Collections\Collection
@@ -165,9 +165,9 @@ class AntiquitasModules
      */
     public function __construct()
     {
-        $this->outils = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->idOutil = new \Doctrine\Common\Collections\ArrayCollection();
         $this->idUtilisateur = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->auteurs = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->idAuteur = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
 
@@ -524,72 +524,6 @@ class AntiquitasModules
     }
 
     /**
-     * Add auteurs
-     *
-     * @param \NTE\AntiquitasBundle\Entity\AntiquitasAuteurs $auteurs
-     * @return AntiquitasModules
-     */
-    public function addAuteur(\NTE\AntiquitasBundle\Entity\AntiquitasAuteurs $auteurs)
-    {
-        $this->auteurs[] = $auteurs;
-
-        return $this;
-    }
-
-    /**
-     * Remove auteurs
-     *
-     * @param \NTE\AntiquitasBundle\Entity\AntiquitasAuteurs $auteurs
-     */
-    public function removeAuteur(\NTE\AntiquitasBundle\Entity\AntiquitasAuteurs $auteurs)
-    {
-        $this->auteurs->removeElement($auteurs);
-    }
-
-    /**
-     * Get auteurs
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getAuteurs()
-    {
-        return $this->auteurs;
-    }
-
-    /**
-     * Add outils
-     *
-     * @param \NTE\AntiquitasBundle\Entity\AntiquitasModulesOutils $outils
-     * @return AntiquitasModules
-     */
-    public function addOutil(\NTE\AntiquitasBundle\Entity\AntiquitasModulesOutils $outils)
-    {
-        $this->outils[] = $outils;
-
-        return $this;
-    }
-
-    /**
-     * Remove outils
-     *
-     * @param \NTE\AntiquitasBundle\Entity\AntiquitasModulesOutils $outils
-     */
-    public function removeOutil(\NTE\AntiquitasBundle\Entity\AntiquitasModulesOutils $outils)
-    {
-        $this->outils->removeElement($outils);
-    }
-
-    /**
-     * Get outils
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getOutils()
-    {
-        return $this->outils;
-    }
-
-    /**
      * Add themes
      *
      * @param \NTE\AntiquitasBundle\Entity\AntiquitasThemes $themes
@@ -598,7 +532,7 @@ class AntiquitasModules
     public function addTheme(\NTE\AntiquitasBundle\Entity\AntiquitasThemes $themes)
     {
         $this->themes[] = $themes;
-    
+
         return $this;
     }
 
@@ -615,10 +549,76 @@ class AntiquitasModules
     /**
      * Get themes
      *
-     * @return \Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection
      */
     public function getThemes()
     {
         return $this->themes;
+    }
+
+    /**
+     * Add idOutil
+     *
+     * @param \NTE\AntiquitasBundle\Entity\AntiquitasModulesOutils $idOutil
+     * @return AntiquitasModules
+     */
+    public function addIdOutil(\NTE\AntiquitasBundle\Entity\AntiquitasModulesOutils $idOutil)
+    {
+        $this->idOutil[] = $idOutil;
+    
+        return $this;
+    }
+
+    /**
+     * Remove idOutil
+     *
+     * @param \NTE\AntiquitasBundle\Entity\AntiquitasModulesOutils $idOutil
+     */
+    public function removeIdOutil(\NTE\AntiquitasBundle\Entity\AntiquitasModulesOutils $idOutil)
+    {
+        $this->idOutil->removeElement($idOutil);
+    }
+
+    /**
+     * Get idOutil
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getIdOutil()
+    {
+        return $this->idOutil;
+    }
+
+    /**
+     * Add idAuteur
+     *
+     * @param \NTE\AntiquitasBundle\Entity\AntiquitasAuteurs $idAuteur
+     * @return AntiquitasModules
+     */
+    public function addIdAuteur(\NTE\AntiquitasBundle\Entity\AntiquitasAuteurs $idAuteur)
+    {
+        $this->idAuteur[] = $idAuteur;
+    
+        return $this;
+    }
+
+    /**
+     * Remove idAuteur
+     *
+     * @param \NTE\AntiquitasBundle\Entity\AntiquitasAuteurs $idAuteur
+     */
+    public function removeIdAuteur(\NTE\AntiquitasBundle\Entity\AntiquitasAuteurs $idAuteur)
+    {
+        $this->idAuteur->removeElement($idAuteur);
+    }
+
+    /**
+     * Get idAuteur
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getIdAuteur()
+    {
+        return $this->idAuteur;
     }
 }

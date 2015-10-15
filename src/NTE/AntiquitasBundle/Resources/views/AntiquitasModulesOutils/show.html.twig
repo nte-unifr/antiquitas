@@ -2,15 +2,15 @@
 
 {% block body -%}
 
-    <h2 style="text-align: center;">{{ 'Outils pour le module' | trans }} {% if entities|length > 0 %}<br /><a href="{{ path('modules_show', {'id': entities.0.idModule.id}) }}" style="text-decoration: none; color: #006699;">"{{ entities.0.idModule|raw }}"</a>{% endif %}</h2>
+    <h2 style="text-align: center;">{{ 'Outils pour le module' | trans }} {% if entities|length > 0 %}<br /><a href="{{ path('modules_show', {'id': module.id}) }}" style="text-decoration: none; color: #006699;">"{{module.nom}}"</a>{% endif %}</h2>
 
     <h3>{{ type|capitalize }}</h3>
     {% for outil in entities %}
         <ul><li>
-            {% if 'href' in outil.idOutil.nom %}
-                {{ outil.idOutil.nom|raw }}
+            {% if 'href' in outil.nom %}
+                {{ outil.nom|raw }}
             {% else %}
-                <a href="{{ asset('bundles/nteantiquitas/outils') }}/{{ outil.idOutil.id }}/index.html">{{ outil.idOutil.nom|raw }}</a>
+                <a href="{{ asset('bundles/nteantiquitas/outils') }}/{{ outil.id }}/index.html">{{ outil.nom|raw }}</a>
             {% endif %}
         </li></ul>
     {% endfor %}

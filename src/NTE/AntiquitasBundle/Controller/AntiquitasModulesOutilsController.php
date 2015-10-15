@@ -47,17 +47,28 @@ class AntiquitasModulesOutilsController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-#        $entity = $em->getRepository('NTEAntiquitasBundle:AntiquitasModules')->findBy(array('id' => $id, 'type'));
-        $entities = $em->getRepository('NTEAntiquitasBundle:AntiquitasModulesOutilsModules')->createQueryBuilder('m')
-                     ->leftJoin('m.idOutil', 'o')
-                     ->leftJoin('o.idType', 't')
-                     ->where('m.idModule = :module AND t.nom = :type')
-                     ->setParameter('module', $id)
-                     ->setParameter('type', $type)
-                     ->getQuery()->getResult();
+        $module = $em->getRepository('NTEAntiquitasBundle:AntiquitasModules')->findOneById($id);
+        $typeEntity   = $em->getRepository('NTEAntiquitasBundle:AntiquitasTypes')->findOneByNom($type);
+        $typeId = $typeEntity->getId();
+        // $entities = $em->getRepository('NTEAntiquitasBundle:AntiquitasModulesOutils')->createQueryBuilder('m')
+        //              ->leftJoin('m.idOutil', 'o')
+        //              ->leftJoin('o.idType', 't')
+        //              ->where('m.idModule = :module AND t.nom = :type')
+        //              ->setParameter('module', $id)
+        //              ->setParameter('type', $type)
+        //              ->getQuery()->getResult();
+
+        $queryText  = "SELECT o FROM NTEAntiquitasBundle:AntiquitasModulesOutils o ";
+        $queryText .= "WHERE :module MEMBER OF o.idModule AND o.idType = :type";
+
+        $query = $em->createQuery($queryText);
+        $query->setParameter('module', $module);
+        $query->setParameter('type', $typeId);
+
+        $entities = $query->getResult();
 
         if (count($entities) > 0) {
-            $titre = 'Outils du module ' . $entities[0]->getIdModule()->getId();
+            $titre = 'Outils du module ' . $id;
         } else {
             $titre = 'Outils du module ';
         }
@@ -66,6 +77,7 @@ class AntiquitasModulesOutilsController extends Controller
             'titre'     => $titre,
             'entities'  => $entities,
             'type'      => $type,
+            'module'    => $module
         );
     }
 }

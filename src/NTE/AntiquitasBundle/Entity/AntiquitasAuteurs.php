@@ -39,9 +39,9 @@ class AntiquitasAuteurs
     /**
      * @var AntiquitasModules
      *
-     * @ORM\ManyToMany(targetEntity="AntiquitasModules", mappedBy="auteurs")
+     * @ORM\ManyToMany(targetEntity="AntiquitasModules", mappedBy="idAuteur")
      */
-    private $modules;
+    private $idModule;
 
 
     public function __toString()
@@ -54,7 +54,7 @@ class AntiquitasAuteurs
      */
     public function __construct()
     {
-        $this->modules = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->idModule = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
 
@@ -115,35 +115,35 @@ class AntiquitasAuteurs
     }
 
     /**
-     * Add modules
+     * Add idModule
      *
-     * @param \NTE\AntiquitasBundle\Entity\AntiquitasModules $modules
+     * @param \NTE\AntiquitasBundle\Entity\AntiquitasModules $idModule
      * @return AntiquitasAuteurs
      */
-    public function addModule(\NTE\AntiquitasBundle\Entity\AntiquitasModules $modules)
+    public function addIdModule(\NTE\AntiquitasBundle\Entity\AntiquitasModules $idModule)
     {
-        $this->modules[] = $modules;
-    
+        $this->idModule[] = $idModule;
+
         return $this;
     }
 
     /**
-     * Remove modules
+     * Remove idModule
      *
-     * @param \NTE\AntiquitasBundle\Entity\AntiquitasModules $modules
+     * @param \NTE\AntiquitasBundle\Entity\AntiquitasModules $idModule
      */
-    public function removeModule(\NTE\AntiquitasBundle\Entity\AntiquitasModules $modules)
+    public function removeIdModule(\NTE\AntiquitasBundle\Entity\AntiquitasModules $idModule)
     {
-        $this->modules->removeElement($modules);
+        $this->idModule->removeElement($idModule);
     }
 
     /**
-     * Get modules
+     * Get idModule
      *
-     * @return \Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection
      */
-    public function getModules()
+    public function getIdModule()
     {
-        return $this->modules;
+        return $this->idModule;
     }
 }
