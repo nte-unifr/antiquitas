@@ -39,19 +39,11 @@ class AntiquitasModulesOutils
     private $idType;
 
     /**
-     * @var \Doctrine\Common\Collections\Collection
+     * @var AntiquitasModules
      *
-     * @ORM\ManyToMany(targetEntity="NTE\AntiquitasBundle\Entity\AntiquitasModules", inversedBy="idOutil")
-     * @ORM\JoinTable(name="antiquitas_modules_outils_modules",
-     *   joinColumns={
-     *     @ORM\JoinColumn(name="id_outil", referencedColumnName="id")
-     *   },
-     *   inverseJoinColumns={
-     *     @ORM\JoinColumn(name="id_module", referencedColumnName="id")
-     *   }
-     * )
+     * @ORM\ManyToMany(targetEntity="AntiquitasModules", mappedBy="outils")
      */
-    private $idModule;
+    private $modules;
 
 
     public function __toString()
@@ -65,9 +57,9 @@ class AntiquitasModulesOutils
      */
     public function __construct()
     {
-        $this->idModule = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->modules = new \Doctrine\Common\Collections\ArrayCollection();
     }
-    
+
 
     /**
      * Set nom
@@ -78,14 +70,14 @@ class AntiquitasModulesOutils
     public function setNom($nom)
     {
         $this->nom = $nom;
-    
+
         return $this;
     }
 
     /**
      * Get nom
      *
-     * @return string 
+     * @return string
      */
     public function getNom()
     {
@@ -95,7 +87,7 @@ class AntiquitasModulesOutils
     /**
      * Get id
      *
-     * @return boolean 
+     * @return boolean
      */
     public function getId()
     {
@@ -111,14 +103,14 @@ class AntiquitasModulesOutils
     public function setIdType(\NTE\AntiquitasBundle\Entity\AntiquitasTypes $idType = null)
     {
         $this->idType = $idType;
-    
+
         return $this;
     }
 
     /**
      * Get idType
      *
-     * @return \NTE\AntiquitasBundle\Entity\AntiquitasTypes 
+     * @return \NTE\AntiquitasBundle\Entity\AntiquitasTypes
      */
     public function getIdType()
     {
@@ -126,35 +118,35 @@ class AntiquitasModulesOutils
     }
 
     /**
-     * Add idModule
+     * Add modules
      *
-     * @param \NTE\AntiquitasBundle\Entity\AntiquitasModules $idModule
+     * @param \NTE\AntiquitasBundle\Entity\AntiquitasModules $modules
      * @return AntiquitasModulesOutils
      */
-    public function addIdModule(\NTE\AntiquitasBundle\Entity\AntiquitasModules $idModule)
+    public function addModule(\NTE\AntiquitasBundle\Entity\AntiquitasModules $modules)
     {
-        $this->idModule[] = $idModule;
-    
+        $this->modules[] = $modules;
+
         return $this;
     }
 
     /**
-     * Remove idModule
+     * Remove modules
      *
-     * @param \NTE\AntiquitasBundle\Entity\AntiquitasModules $idModule
+     * @param \NTE\AntiquitasBundle\Entity\AntiquitasModules $modules
      */
-    public function removeIdModule(\NTE\AntiquitasBundle\Entity\AntiquitasModules $idModule)
+    public function removeModule(\NTE\AntiquitasBundle\Entity\AntiquitasModules $modules)
     {
-        $this->idModule->removeElement($idModule);
+        $this->modules->removeElement($modules);
     }
 
     /**
-     * Get idModule
+     * Get modules
      *
-     * @return \Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection
      */
-    public function getIdModule()
+    public function getModules()
     {
-        return $this->idModule;
+        return $this->modules;
     }
 }

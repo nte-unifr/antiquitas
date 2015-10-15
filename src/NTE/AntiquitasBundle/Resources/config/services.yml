@@ -66,12 +66,6 @@ services:
         tags:
             - {name: sonata.admin, manager_type: orm, group: Antiquitas, label: Themes}
 
-    nte_antiquitas.admin.antiquitas_themes_modules:
-        class: NTE\AntiquitasBundle\Admin\AntiquitasThemesModulesAdmin
-        arguments: [~, NTE\AntiquitasBundle\Entity\AntiquitasThemesModules, SonataAdminBundle:CRUD]
-        tags:
-            - {name: sonata.admin, manager_type: orm, group: Antiquitas, label: Themes Modules}
-
     nte_antiquitas.admin.antiquitas_categories:
         class: NTE\AntiquitasBundle\Admin\AntiquitasCategoriesAdmin
         arguments: [~, NTE\AntiquitasBundle\Entity\AntiquitasCategories, SonataAdminBundle:CRUD]

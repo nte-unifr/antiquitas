@@ -94,9 +94,13 @@ class AntiquitasModules
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\ManyToMany(targetEntity="NTE\AntiquitasBundle\Entity\AntiquitasModulesOutils", mappedBy="idModule")
+     * @ORM\ManyToMany(targetEntity="AntiquitasModulesOutils")
+     * @ORM\JoinTable(name="antiquitas_modules_outils_modules",
+     *     joinColumns={@ORM\JoinColumn(name="id_module", referencedColumnName="id")},
+     *     inverseJoinColumns={@ORM\JoinColumn(name="id_outil", referencedColumnName="id")}
+     * )
      */
-    private $idOutil;
+    private $outils;
 
     /**
      * @var \Doctrine\Common\Collections\Collection
@@ -106,11 +110,18 @@ class AntiquitasModules
     private $idUtilisateur;
 
     /**
-     * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\ManyToMany(targetEntity="NTE\AntiquitasBundle\Entity\AntiquitasAuteurs", mappedBy="idModule")
-     */
-    private $idAuteur;
+     * @ORM\ManyToMany(targetEntity="AntiquitasAuteurs", inversedBy="modules")
+     * @ORM\JoinTable(name="antiquitas_auteurs_modules",
+     *   joinColumns={
+     *     @ORM\JoinColumn(name="id_module", referencedColumnName="id")
+     *   },
+     *   inverseJoinColumns={
+     *     @ORM\JoinColumn(name="id_auteur", referencedColumnName="id")
+     *   }
+     * )
+    */
+    protected $auteurs;
 
     /**
      * @var \Doctrine\Common\Collections\Collection
@@ -136,39 +147,12 @@ class AntiquitasModules
      */
     private $media;
 
-#    /**
-#     * @var \Doctrine\Common\Collections\Collection
-#     *
-#     * @ORM\ManyToMany(targetEntity="AntiquitasModulesOutils")
-#     * @ORM\JoinTable(name="antiquitas_modules_outils_modules",
-#     *     joinColumns={@ORM\JoinColumn(name="id_module", referencedColumnName="id")},
-#     *     inverseJoinColumns={@ORM\JoinColumn(name="id_outil", referencedColumnName="id")}
-#     * )
-#     */
-#    private $outils;
-
-    /**
-     * @ORM\OneToMany(targetEntity="AntiquitasModulesOutilsModules", mappedBy="idModule", cascade={"persist"}, orphanRemoval=true)
-     */
-    private $outils;
-
     /**
      * @var string
      *
      * @ORM\Column(name="bibliographie", type="text", nullable=true)
      */
     private $bibliographie;
-
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     *
-     * @ORM\ManyToMany(targetEntity="AntiquitasAuteurs")
-     * @ORM\JoinTable(name="antiquitas_auteurs_modules",
-     *     joinColumns={@ORM\JoinColumn(name="id_module", referencedColumnName="id")},
-     *     inverseJoinColumns={@ORM\JoinColumn(name="id_auteur", referencedColumnName="id")}
-     * )
-     */
-    private $auteurs;
 
 
     public function __toString()
@@ -181,11 +165,11 @@ class AntiquitasModules
      */
     public function __construct()
     {
-        $this->idOutil = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->outils = new \Doctrine\Common\Collections\ArrayCollection();
         $this->idUtilisateur = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->idAuteur = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->auteurs = new \Doctrine\Common\Collections\ArrayCollection();
     }
-    
+
 
     /**
      * Set nom
@@ -196,14 +180,14 @@ class AntiquitasModules
     public function setNom($nom)
     {
         $this->nom = $nom;
-    
+
         return $this;
     }
 
     /**
      * Get nom
      *
-     * @return string 
+     * @return string
      */
     public function getNom()
     {
@@ -219,14 +203,14 @@ class AntiquitasModules
     public function setSourcesIntroduction($sourcesIntroduction)
     {
         $this->sourcesIntroduction = $sourcesIntroduction;
-    
+
         return $this;
     }
 
     /**
      * Get sourcesIntroduction
      *
-     * @return string 
+     * @return string
      */
     public function getSourcesIntroduction()
     {
@@ -242,14 +226,14 @@ class AntiquitasModules
     public function setBibliographieIntroduction($bibliographieIntroduction)
     {
         $this->bibliographieIntroduction = $bibliographieIntroduction;
-    
+
         return $this;
     }
 
     /**
      * Get bibliographieIntroduction
      *
-     * @return string 
+     * @return string
      */
     public function getBibliographieIntroduction()
     {
@@ -265,14 +249,14 @@ class AntiquitasModules
     public function setIntroductionResume($introductionResume)
     {
         $this->introductionResume = $introductionResume;
-    
+
         return $this;
     }
 
     /**
      * Get introductionResume
      *
-     * @return string 
+     * @return string
      */
     public function getIntroductionResume()
     {
@@ -288,14 +272,14 @@ class AntiquitasModules
     public function setIntroduction($introduction)
     {
         $this->introduction = $introduction;
-    
+
         return $this;
     }
 
     /**
      * Get introduction
      *
-     * @return string 
+     * @return string
      */
     public function getIntroduction()
     {
@@ -311,14 +295,14 @@ class AntiquitasModules
     public function setConclusionResume($conclusionResume)
     {
         $this->conclusionResume = $conclusionResume;
-    
+
         return $this;
     }
 
     /**
      * Get conclusionResume
      *
-     * @return string 
+     * @return string
      */
     public function getConclusionResume()
     {
@@ -334,14 +318,14 @@ class AntiquitasModules
     public function setConclusion($conclusion)
     {
         $this->conclusion = $conclusion;
-    
+
         return $this;
     }
 
     /**
      * Get conclusion
      *
-     * @return string 
+     * @return string
      */
     public function getConclusion()
     {
@@ -357,14 +341,14 @@ class AntiquitasModules
     public function setBanniere($banniere)
     {
         $this->banniere = $banniere;
-    
+
         return $this;
     }
 
     /**
      * Get banniere
      *
-     * @return string 
+     * @return string
      */
     public function getBanniere()
     {
@@ -380,14 +364,14 @@ class AntiquitasModules
     public function setLangage($langage)
     {
         $this->langage = $langage;
-    
+
         return $this;
     }
 
     /**
      * Get langage
      *
-     * @return string 
+     * @return string
      */
     public function getLangage()
     {
@@ -403,14 +387,14 @@ class AntiquitasModules
     public function setPosition($position)
     {
         $this->position = $position;
-    
+
         return $this;
     }
 
     /**
      * Get position
      *
-     * @return integer 
+     * @return integer
      */
     public function getPosition()
     {
@@ -420,44 +404,11 @@ class AntiquitasModules
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
         return $this->id;
-    }
-
-    /**
-     * Add idOutil
-     *
-     * @param \NTE\AntiquitasBundle\Entity\AntiquitasModulesOutils $idOutil
-     * @return AntiquitasModules
-     */
-    public function addIdOutil(\NTE\AntiquitasBundle\Entity\AntiquitasModulesOutils $idOutil)
-    {
-        $this->idOutil[] = $idOutil;
-    
-        return $this;
-    }
-
-    /**
-     * Remove idOutil
-     *
-     * @param \NTE\AntiquitasBundle\Entity\AntiquitasModulesOutils $idOutil
-     */
-    public function removeIdOutil(\NTE\AntiquitasBundle\Entity\AntiquitasModulesOutils $idOutil)
-    {
-        $this->idOutil->removeElement($idOutil);
-    }
-
-    /**
-     * Get idOutil
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getIdOutil()
-    {
-        return $this->idOutil;
     }
 
     /**
@@ -469,7 +420,7 @@ class AntiquitasModules
     public function addIdUtilisateur(\NTE\AntiquitasBundle\Entity\AntiquitasUtilisateurs $idUtilisateur)
     {
         $this->idUtilisateur[] = $idUtilisateur;
-    
+
         return $this;
     }
 
@@ -486,77 +437,11 @@ class AntiquitasModules
     /**
      * Get idUtilisateur
      *
-     * @return \Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection
      */
     public function getIdUtilisateur()
     {
         return $this->idUtilisateur;
-    }
-
-    /**
-     * Add idAuteur
-     *
-     * @param \NTE\AntiquitasBundle\Entity\AntiquitasAuteurs $idAuteur
-     * @return AntiquitasModules
-     */
-    public function addIdAuteur(\NTE\AntiquitasBundle\Entity\AntiquitasAuteurs $idAuteur)
-    {
-        $this->idAuteur[] = $idAuteur;
-    
-        return $this;
-    }
-
-    /**
-     * Remove idAuteur
-     *
-     * @param \NTE\AntiquitasBundle\Entity\AntiquitasAuteurs $idAuteur
-     */
-    public function removeIdAuteur(\NTE\AntiquitasBundle\Entity\AntiquitasAuteurs $idAuteur)
-    {
-        $this->idAuteur->removeElement($idAuteur);
-    }
-
-    /**
-     * Get idAuteur
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getIdAuteur()
-    {
-        return $this->idAuteur;
-    }
-
-    /**
-     * Add themes
-     *
-     * @param \NTE\AntiquitasBundle\Entity\AntiquitasThemesModules $themes
-     * @return AntiquitasModules
-     */
-    public function addTheme(\NTE\AntiquitasBundle\Entity\AntiquitasThemesModules $themes)
-    {
-        $this->themes[] = $themes;
-    
-        return $this;
-    }
-
-    /**
-     * Remove themes
-     *
-     * @param \NTE\AntiquitasBundle\Entity\AntiquitasThemesModules $themes
-     */
-    public function removeTheme(\NTE\AntiquitasBundle\Entity\AntiquitasThemesModules $themes)
-    {
-        $this->themes->removeElement($themes);
-    }
-
-    /**
-     * Get themes
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getThemes()
-    {
-        return $this->themes;
     }
 
     /**
@@ -568,7 +453,7 @@ class AntiquitasModules
     public function addChapitre(\NTE\AntiquitasBundle\Entity\AntiquitasChapitres $chapitres)
     {
         $this->chapitres[] = $chapitres;
-    
+
         return $this;
     }
 
@@ -585,7 +470,7 @@ class AntiquitasModules
     /**
      * Get chapitres
      *
-     * @return \Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection
      */
     public function getChapitres()
     {
@@ -601,14 +486,14 @@ class AntiquitasModules
     public function setMedia(\Application\Sonata\MediaBundle\Entity\Media $media = null)
     {
         $this->media = $media;
-    
+
         return $this;
     }
 
     /**
      * Get media
      *
-     * @return \Application\Sonata\MediaBundle\Entity\Media 
+     * @return \Application\Sonata\MediaBundle\Entity\Media
      */
     public function getMedia()
     {
@@ -616,37 +501,26 @@ class AntiquitasModules
     }
 
     /**
-     * Add outils
+     * Set bibliographie
      *
-     * @param \NTE\AntiquitasBundle\Entity\AntiquitasModulesOutilsModules $outils
+     * @param string $bibliographie
      * @return AntiquitasModules
      */
-    public function addOutil(\NTE\AntiquitasBundle\Entity\AntiquitasModulesOutilsModules $outils)
+    public function setBibliographie($bibliographie)
     {
-        $outils->setIdModule($this); # pour la collection dans le formulaire
-        $this->outils[] = $outils;
-    
+        $this->bibliographie = $bibliographie;
+
         return $this;
     }
 
     /**
-     * Remove outils
+     * Get bibliographie
      *
-     * @param \NTE\AntiquitasBundle\Entity\AntiquitasModulesOutilsModules $outils
+     * @return string
      */
-    public function removeOutil(\NTE\AntiquitasBundle\Entity\AntiquitasModulesOutilsModules $outils)
+    public function getBibliographie()
     {
-        $this->outils->removeElement($outils);
-    }
-
-    /**
-     * Get outils
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getOutils()
-    {
-        return $this->outils;
+        return $this->bibliographie;
     }
 
     /**
@@ -658,7 +532,7 @@ class AntiquitasModules
     public function addAuteur(\NTE\AntiquitasBundle\Entity\AntiquitasAuteurs $auteurs)
     {
         $this->auteurs[] = $auteurs;
-    
+
         return $this;
     }
 
@@ -675,7 +549,7 @@ class AntiquitasModules
     /**
      * Get auteurs
      *
-     * @return \Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection
      */
     public function getAuteurs()
     {
@@ -683,25 +557,68 @@ class AntiquitasModules
     }
 
     /**
-     * Set bibliographie
+     * Add outils
      *
-     * @param string $bibliographie
+     * @param \NTE\AntiquitasBundle\Entity\AntiquitasModulesOutils $outils
      * @return AntiquitasModules
      */
-    public function setBibliographie($bibliographie)
+    public function addOutil(\NTE\AntiquitasBundle\Entity\AntiquitasModulesOutils $outils)
     {
-        $this->bibliographie = $bibliographie;
+        $this->outils[] = $outils;
+
+        return $this;
+    }
+
+    /**
+     * Remove outils
+     *
+     * @param \NTE\AntiquitasBundle\Entity\AntiquitasModulesOutils $outils
+     */
+    public function removeOutil(\NTE\AntiquitasBundle\Entity\AntiquitasModulesOutils $outils)
+    {
+        $this->outils->removeElement($outils);
+    }
+
+    /**
+     * Get outils
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getOutils()
+    {
+        return $this->outils;
+    }
+
+    /**
+     * Add themes
+     *
+     * @param \NTE\AntiquitasBundle\Entity\AntiquitasThemes $themes
+     * @return AntiquitasModules
+     */
+    public function addTheme(\NTE\AntiquitasBundle\Entity\AntiquitasThemes $themes)
+    {
+        $this->themes[] = $themes;
     
         return $this;
     }
 
     /**
-     * Get bibliographie
+     * Remove themes
      *
-     * @return string 
+     * @param \NTE\AntiquitasBundle\Entity\AntiquitasThemes $themes
      */
-    public function getBibliographie()
+    public function removeTheme(\NTE\AntiquitasBundle\Entity\AntiquitasThemes $themes)
     {
-        return $this->bibliographie;
+        $this->themes->removeElement($themes);
+    }
+
+    /**
+     * Get themes
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getThemes()
+    {
+        return $this->themes;
     }
 }

@@ -74,10 +74,7 @@ class AntiquitasModulesAdmin extends Admin
                 ->add('themes', null, array('expanded' => true))
             ->end()
             ->with('Outils')
-                ->add('outils', 'sonata_type_collection', array('by_reference' => false, 'required' => false), array(
-                        'edit' => 'inline',
-                        'inline' => 'table',
-                    ))
+                ->add('outils', null, array('required' => false, 'expanded' => true))
             ->end()
             ->with('Auteurs')
                 ->add('auteurs', null, array('expanded' => true))

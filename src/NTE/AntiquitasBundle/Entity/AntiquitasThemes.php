@@ -46,14 +46,9 @@ class AntiquitasThemes
     private $idCategorie;
 
     /**
-     * @var \Doctrine\Common\Collections\Collection
+     * @var AntiquitasModules
      *
-     * @ORM\ManyToMany(targetEntity="AntiquitasModules")
-     * @ORM\JoinTable(name="antiquitas_themes_modules",
-     *     joinColumns={@ORM\JoinColumn(name="id_theme", referencedColumnName="id")},
-     *     inverseJoinColumns={@ORM\JoinColumn(name="id_module", referencedColumnName="id")}
-     * )
-     * @ORM\OrderBy({"position" = "ASC"})
+     * @ORM\ManyToMany(targetEntity="AntiquitasModules", mappedBy="themes")
      */
     private $modules;
 
@@ -74,14 +69,14 @@ class AntiquitasThemes
     public function setNom($nom)
     {
         $this->nom = $nom;
-    
+
         return $this;
     }
 
     /**
      * Get nom
      *
-     * @return string 
+     * @return string
      */
     public function getNom()
     {
@@ -97,14 +92,14 @@ class AntiquitasThemes
     public function setPosition($position)
     {
         $this->position = $position;
-    
+
         return $this;
     }
 
     /**
      * Get position
      *
-     * @return integer 
+     * @return integer
      */
     public function getPosition()
     {
@@ -114,7 +109,7 @@ class AntiquitasThemes
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -130,14 +125,14 @@ class AntiquitasThemes
     public function setIdCategorie(\NTE\AntiquitasBundle\Entity\AntiquitasCategories $idCategorie = null)
     {
         $this->idCategorie = $idCategorie;
-    
+
         return $this;
     }
 
     /**
      * Get idCategorie
      *
-     * @return \NTE\AntiquitasBundle\Entity\AntiquitasCategories 
+     * @return \NTE\AntiquitasBundle\Entity\AntiquitasCategories
      */
     public function getIdCategorie()
     {
@@ -150,7 +145,7 @@ class AntiquitasThemes
     {
         $this->modules = new \Doctrine\Common\Collections\ArrayCollection();
     }
-    
+
     /**
      * Add modules
      *
