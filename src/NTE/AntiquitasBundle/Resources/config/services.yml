@@ -119,9 +119,3 @@ services:
         arguments: [~, NTE\AntiquitasBundle\Entity\AntiquitasUtilisateurs, SonataAdminBundle:CRUD]
         tags:
             - {name: sonata.admin, manager_type: orm, group: Antiquitas, label: Utilisateurs}
-
-    nte_antiquitas.admin.antiquitas_modules_outils_modules:
-        class: NTE\AntiquitasBundle\Admin\AntiquitasModulesOutilsModulesAdmin
-        arguments: [~, NTE\AntiquitasBundle\Entity\AntiquitasModulesOutilsModules, SonataAdminBundle:CRUD]
-        tags:
-            - {name: sonata.admin, manager_type: orm, group: Antiquitas, label: Modules Outils Modules}
