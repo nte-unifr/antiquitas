@@ -74,10 +74,10 @@ class AntiquitasModulesAdmin extends Admin
                 ->add('themes', null, array('expanded' => true))
             ->end()
             ->with('Outils')
-                ->add('outils', null, array('required' => false, 'expanded' => true))
+                ->add('idOutil', null, array('required' => false, 'expanded' => true, 'label' => "Outils"))
             ->end()
             ->with('Auteurs')
-                ->add('auteurs', null, array('expanded' => true))
+                ->add('idAuteur', null, array('expanded' => true, 'label' => "Auteurs"))
             ->end()
         ;
     }
@@ -107,7 +107,7 @@ class AntiquitasModulesAdmin extends Admin
                 ->add('chapitres')
             ->end()
             ->with('Outils')
-                ->add('outils')
+                ->add('idOutil', null, array('label' => "Outils"))
             ->end()
         ;
     }
