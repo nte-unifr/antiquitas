@@ -102,14 +102,14 @@
   </script>
 
     <script type="text/javascript">
-        var toolsWindowOptions = 
+        var toolsWindowOptions =
             "toolbar=yes"
             +",location=yes"
             +",directories=no"
-            +",status=yes" 
+            +",status=yes"
             +",menubar=no"
             +",scrollbars=yes"
-            +",resizable=yes" 
+            +",resizable=yes"
             +",width=800"
             +",height=593";
 
@@ -118,12 +118,12 @@
         function OpenToolsWindow(theFile) {
             if ((toolsWindow == null) || (toolsWindow.closed)){
                 toolsWindow = this.open(theFile, "toolsWindow", toolsWindowOptions);
-            } 
+            }
             else {
                 toolsWindow.location.replace(theFile);
             }
             if (window.focus)
-                toolsWindow.focus(); 
+                toolsWindow.focus();
 
         }
     </script>
@@ -145,7 +145,7 @@
                 </div>
             </div>
         </div>
-      
+
       <div class="hidden-desktop">
         <img src="{{ asset('bundles/nteantiquitas/img/bandeau_unifr_universite.jpg') }}" alt="UniFR Logo" />
       </div>
@@ -178,9 +178,6 @@
                 </li>
                 <li>
                   <a href="{{ path('textes_show', {'id': 'cours'}) }}" title="{{ 'Antiquitas dans les Hautes écoles' | trans }}">{{ 'Hautes écoles' | trans }}</a>
-                </li>
-                <li>
-                  <a href="{{ path('textes_show', {'id': 'communication'}) }}">{{ 'Communications' | trans }}</a>
                 </li>
                 <li>
                   <a href="{{ path('textes_show', {'id': 'equipe'}) }}">{{ 'Equipe' | trans }}</a>
