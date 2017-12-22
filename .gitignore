@@ -45,6 +45,7 @@
 /config/deploy/*
 /config/deploy.rb
 /lib/capistrano/*
+/log
 /.bundle/*
 
 .DS_Store
